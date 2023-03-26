@@ -26,12 +26,17 @@ In a normal Tap setup, there is no room for that piece to go, so the MGN9 rail i
 
 Shuttle:
  * 8x M3 5mm slotted pan head screws for the [shuttle assembly](assembly.md), look [like this](https://accu-components.com/us/pan-head-screws/7119-SFP-M3-5-A4).
+ * 2x M3x6 steel countersunk screws, same ones as in Tap kit.
 
 Toolhead:
- * A Tap kit + a Stealthburner toolhead
+ * A Tap kit + a Stealthburner toolhead of your choice
+ * 2x 5x2 round magnet
+ * 2x M3x12 screws with thread dremeled off for the last 3 mm
 
 Dock:
- * TODO
+ * 2x m3x8 steel screws - need to be magnetic
+ * 2x m3x6 countersunk steel scews - need to be magnetic
+ * 1x m3x16, 1x m3x12, 1x m3x10, 1x heatset insert
 
 # Work site here
 
@@ -40,10 +45,10 @@ This is **work in progress**, nothing has been tested yet.
 
 Done:
 * The main shuttle + Stealthburner mount
+* The dock works
 
 WIP: 
-* Finish the dock
-* Test it all
+* Test, test, test
 
 
 ![Preview](/images/side.png)
