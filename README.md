@@ -1,5 +1,7 @@
-# Voron TapChanger
+# TapChanger for Voron
 A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based on the [Tap](https://github.com/VoronDesign/Voron-Tap) bed probe.
+
+This is independant effort, not developed by the Voron team.
 
 ## Features
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
