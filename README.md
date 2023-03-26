@@ -26,7 +26,8 @@ In a normal Tap setup, there is no room for that piece to go, so the MGN9 rail i
 
 Shuttle:
  * 8x M3 5mm slotted pan head screws for the [shuttle assembly](assembly.md), look [like this](https://accu-components.com/us/pan-head-screws/7119-SFP-M3-5-A4).
-
+ * 2x 5x2mm round magnets for the carriage plug. Easy to mod for 6x3.
+ 
 Toolhead:
  * A Tap kit + a Stealthburner toolhead
 
