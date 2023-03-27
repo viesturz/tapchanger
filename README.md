@@ -13,14 +13,14 @@ This is independant effort, not developed by the Voron team.
 
 ## Design
 
-Toolheads are docked in an extra extrusion at the front of the printer. The toolhead is rested on a dock and the gantry moves down toolhead slides off the Tap rail.
+Toolheads are docked in an extra extrusion at the front of the printer. The toolhead is rested on a dock and as the shuttle moves down toolhead slides off the Tap rail.
 
 Cudos for inspiration to [WP-Daksh](https://github.com/ankurv2k6/wp-daksh-toolchanger) and the Voron India discord.
 
 The Tap probe is almost working as a toolchanger out of the box, the main issue is that a naked linear carriage is prone to loosing balls.
-This is solved by pushing in a supporting plastic piece while the shuttle is traveling between the tools.
+This is solved by pushing in a supporting plastic plug while the shuttle is traveling between the tools.
 
-In a normal Tap setup, there is no room for that piece to go, so the MGN9 rail is flipped around so the carriage is on the shuttle side and the rail is on the toolhead side, allowing the plastic rail to sit below hotend in the dock.
+In a normal Tap setup, the plug would need to come from above the rail and no room for it there. So the MGN9 rail is flipped around with the carriage on the shuttle side and the rail is on the toolhead side, allowing the plug to sit below the Tap rail in the dock.
 
 ## BOM
 
