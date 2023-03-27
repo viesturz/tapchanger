@@ -37,7 +37,8 @@ Toolhead:
 Dock:
  * 2x m3x8 steel screws - need to be magnetic
  * 2x m3x6 countersunk steel scews - need to be magnetic
- * 1x m3x16, 1x m3x12, 1x m3x10, 1x heatset insert
+ * 2x m3x16, 1x m3x12, 1x m3x10, 2x heatset insert
+ * Some 1mm silicone sheet, can reuse cooking gloves or bakery cups
 
 # Work site here
 
