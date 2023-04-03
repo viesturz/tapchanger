@@ -10,6 +10,7 @@ This is independant effort, not developed by the Voron team.
 * No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
 * Uses the Tap sensor to verify successful dropoffs and pickups.
 
+See [Youtube](https://www.youtube.com/playlist?list=PLqU7kX5nUJDRDw5z0NLwJ22OkV6fbjnSW) for some action.
 
 ## Design
 
@@ -18,9 +19,9 @@ Toolheads are docked in an extra extrusion at the front of the printer. The tool
 Cudos for inspiration to [WP-Daksh](https://github.com/ankurv2k6/wp-daksh-toolchanger) and the Voron India discord.
 
 The Tap probe is almost working as a toolchanger out of the box, the main issue is that a naked linear carriage is prone to loosing balls.
-This is solved by pushing in a supporting plastic plug while the shuttle is traveling between the tools.
+This is solved by pushing in a supporting TPU plug while the shuttle is traveling between the tools.
 
-In a normal Tap setup, the plug would need to come from above the rail and no room for it there. So the MGN9 rail is flipped around with the carriage on the shuttle side and the rail is on the toolhead side, allowing the plug to sit below the Tap rail in the dock.
+In a normal Tap setup, the plug would need to come from above the rail and no room for it there. So the MGN9 rail is flipped around - the carriage is on the shuttle side and the rail is on the toolhead side, allowing the plug to sit below the Tap rail in the dock.
 
 ## BOM
 
@@ -29,27 +30,32 @@ Shuttle:
  * 2x M3x6 steel countersunk screws, same ones as in Tap kit.
  * 2x 5x2mm round magnets for the carriage plug. Or mod for 6x3.
  
-Toolhead:
+Each Toolhead:
  * A Tap kit + a Stealthburner toolhead of your choice
  * 2x 5x2 round magnet
  * 2x M3x12 screws with thread dremeled off for the last 3 mm
 
-Dock:
- * 2x m3x8 steel screws - need to be magnetic
+Each Dock:
+ * 2x m3x12 steel screws - need to be magnetic
  * 2x m3x6 countersunk steel scews - need to be magnetic
  * 2x m3x16, 1x m3x12, 1x m3x10, 2x heatset insert
  * Some 1mm silicone sheet, can reuse cooking gloves or bakery cups
+ 
+Distribution board:
+ * TODO
 
 # Work site here
 
-This is **work in progress**, nothing has been tested yet.
+This is **work in progress**, nothing has been tested yet. 
 
 Done:
 * The main shuttle + Stealthburner mount
 * The dock works
 
 WIP: 
-* Test, test, test
+* Put on a printer
+* Make the distribution board.
+* Test, fix, repeat
 
 
 ![Preview](/images/side.png)
