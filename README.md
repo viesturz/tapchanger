@@ -10,6 +10,7 @@ This is independant effort, not developed by the Voron team.
 * No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
 * Uses the Tap sensor to verify successful dropoffs and pickups.
 
+See [Youtube](https://www.youtube.com/playlist?list=PLqU7kX5nUJDRDw5z0NLwJ22OkV6fbjnSW) for some action.
 
 ## Design
 
@@ -39,10 +40,13 @@ Each Dock:
  * 2x m3x6 countersunk steel scews - need to be magnetic
  * 2x m3x16, 1x m3x12, 1x m3x10, 2x heatset insert
  * Some 1mm silicone sheet, can reuse cooking gloves or bakery cups
+ 
+Distribution board:
+ * TODO
 
 # Work site here
 
-This is **work in progress**, nothing has been tested yet.
+This is **work in progress**, nothing has been tested yet. 
 
 Done:
 * The main shuttle + Stealthburner mount
