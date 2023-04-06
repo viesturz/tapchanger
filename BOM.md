@@ -6,10 +6,10 @@ Shuttle:
  * 2x 5x2mm round magnets for the carriage plug. Or 6x3.
  
 Each Toolhead:
- * A Tap kit + a Stealthburner toolhead of your choice
+ * A Tap kit + a Canbus enabled Stealthburner toolhead of your choice
  * 2x 5x2 round magnet, can use a 6mm magnet, but need to mod the bottom stealthburner screw holes to match.
  * 2x M3x12 screws with thread dremeled off for the last 3 mm
- * **5amps** USB chargning cable, 1m, used for CANbus.
+ * **5amps** USB chargning cable, 1m, used for CANbus. Feel free to use other cables, I just like them being slim and thin.
 
 Each Dock:
  * 2x m3x12 steel screws - need to be magnetic
