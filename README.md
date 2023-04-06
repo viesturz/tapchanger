@@ -1,7 +1,7 @@
 # TapChanger for Voron
 A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based on the [Tap](https://github.com/VoronDesign/Voron-Tap) bed probe.
 
-This is independant effort, not developed by the Voron team.
+This is independant effort, not affiliated with the Voron team. Use at your own risk.
 
 ## Features
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
@@ -34,6 +34,7 @@ Each Toolhead:
  * A Tap kit + a Stealthburner toolhead of your choice
  * 2x 5x2 round magnet
  * 2x M3x12 screws with thread dremeled off for the last 3 mm
+ * **5amps** USB chargning cable, 1m, used for CANbus.
 
 Each Dock:
  * 2x m3x12 steel screws - need to be magnetic
@@ -42,7 +43,9 @@ Each Dock:
  * Some 1mm silicone sheet, can reuse cooking gloves or bakery cups
  
 Distribution board:
- * TODO
+ * Prototyping board ~100mm x 4 holes
+ * 6x KF128 2.54mm pitch 4pin PCB screw Terminal block, rated for 6-10amps.
+ * 2x m3x12, 2x heatset inserts
 
 # Work site here
 
@@ -59,3 +62,5 @@ WIP:
 
 
 ![Preview](/images/side.png)
+
+![Preview](/images/distribution_box.png)
