@@ -1,4 +1,4 @@
-# TapChanger for Voron
+# Toolchanger for Voron 2
 A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based on the [Tap](https://github.com/VoronDesign/Voron-Tap) bed probe.
 
 This is independant effort, not affiliated with the Voron team. Use at your own risk.
