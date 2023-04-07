@@ -36,6 +36,11 @@ WIP:
 * Make the distribution board.
 * Test, fix, repeat
 
+## Changelog
+
+V0.1: It fits together.
+ * Basic hardware assembly and operation works.
+ * Real printing - still to be tested.
 
 ![Preview](/images/side.png)
 
