@@ -13,7 +13,7 @@ This is independant effort, not affiliated with the Voron team. Use at your own 
 
 See [Youtube](https://www.youtube.com/playlist?list=PLqU7kX5nUJDRDw5z0NLwJ22OkV6fbjnSW) for some action.
 
-![Preview](/images/preview.png)
+![Preview](/images/preview.jpg)
 
 ## Design
 
