@@ -54,8 +54,14 @@ class ToolProbe:
                                              minval=0)
         #Register with the endstop
         self.endstop = self.printer.load_object(config, "tool_probe_endstop")
-        self.endstop.addProbe(config, self)
-
+        self.endstop.add_probe(config, self)
+    def multi_probe_begin(self):
+        self.mcu_probe.multi_probe_begin()
+        self.multi_probe_pending = True
+    def multi_probe_end(self):
+        if self.multi_probe_pending:
+            self.multi_probe_pending = False
+            self.mcu_probe.multi_probe_end()
     def get_lift_speed(self, gcmd=None):
         if gcmd is not None:
             return gcmd.get_float("LIFT_SPEED", self.lift_speed, above=0.)

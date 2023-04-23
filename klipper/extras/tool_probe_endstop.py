@@ -17,10 +17,12 @@ class ToolProbeEndstop:
         self.tool_probes = {}
         self.last_query = {} # map from tool number to endstop state
         self.active_probe = None
-        self.multi_probe_pending = False
         self.gcode_move = self.printer.load_object(config, "gcode_move")
-        # Infer Z position to move to during a probe
 
+        # Emulate the probe object, since others rely on this.
+        if self.printer.lookup_object('probe', default=None):
+            raise self.printer.config_error('Cannot have both [probe] and [tool_probe_endstop].')
+        self.printer.add_object('probe', self)
         # Register z_virtual_endstop pin
         self.printer.lookup_object('pins').register_chip('probe', self)
         # Register homing event handlers
@@ -34,8 +36,6 @@ class ToolProbeEndstop:
                                             self._handle_home_rails_begin)
         self.printer.register_event_handler("homing:home_rails_end",
                                             self._handle_home_rails_end)
-        self.printer.register_event_handler("gcode:command_error",
-                                            self._handle_command_error)
         # Register PROBE/QUERY_PROBE commands
         self.gcode = self.printer.lookup_object('gcode')
         self.gcode.register_command('SET_ACTIVE_TOOL_PROBE', self.cmd_SET_ACTIVE_TOOL_PROBE,
@@ -55,13 +55,17 @@ class ToolProbeEndstop:
                                     desc=self.cmd_Z_OFFSET_APPLY_PROBE_help)
 
     def _handle_connect(self):
-        self.detectActiveTool()
+        self._detect_active_tool()
     def _handle_homing_move_begin(self, hmove):
         if self.mcu_probe in hmove.get_mcu_endstops():
-            self.mcu_probe.probe_prepare(hmove)
+            if self.active_probe:
+                self.active_probe.mcu_probe.probe_prepare(hmove)
+            else:
+                raise self.printer.command_error("No active tool probe")
     def _handle_homing_move_end(self, hmove):
         if self.mcu_probe in hmove.get_mcu_endstops():
-            self.mcu_probe.probe_finish(hmove)
+            if self.active_probe:
+                self.active_probe.mcu_probe.probe_finish(hmove)
     def _handle_home_rails_begin(self, homing_state, rails):
         endstops = [es for rail in rails for es, name in rail.get_endstops()]
         if self.mcu_probe in endstops:
@@ -70,18 +74,27 @@ class ToolProbeEndstop:
         endstops = [es for rail in rails for es, name in rail.get_endstops()]
         if self.mcu_probe in endstops:
             self.multi_probe_end()
-    def _handle_command_error(self):
-        try:
-            self.multi_probe_end()
-        except:
-            logging.exception("Multi-probe end")
+
+    def get_offsets(self):
+        if self.active_probe:
+            return self.active_probe.get_offsets()
+        return 0.0, 0.0, 0.0
+    def get_lift_speed(self, gcmd=None):
+        if self.active_probe:
+            return self.active_probe.get_lift_speed(gcmd)
+        return 10.0
+    def run_probe(self, gcmd):
+        if self.active_probe:
+            return self.active_probe.run_probe(gcmd)
+        raise gcmd.error("No active tool probe")
     def multi_probe_begin(self):
-        self.mcu_probe.multi_probe_begin()
-        self.multi_probe_pending = True
+        if self.active_probe:
+            return self.active_probe.multi_probe_begin()
+        raise self.printer.command_error("No active tool probe")
     def multi_probe_end(self):
-        if self.multi_probe_pending:
-            self.multi_probe_pending = False
-            self.mcu_probe.multi_probe_end()
+        if self.active_probe:
+            return self.active_probe.multi_probe_end()
+        raise self.printer.command_error("No active tool probe")
     def setup_pin(self, pin_type, pin_params):
         if pin_type != 'endstop' or pin_params['pin'] != 'z_virtual_endstop':
             raise pins.error("Probe virtual endstop only useful as endstop pin")
@@ -89,16 +102,23 @@ class ToolProbeEndstop:
             raise pins.error("Can not pullup/invert probe virtual endstop")
         return self.mcu_probe
 
-    def addProbe(self, config, tool_probe):
+    def add_probe(self, config, tool_probe):
         if (tool_probe.tool in self.tool_probes):
             raise config.error("Duplicate tool probe nr: " + tool_probe.tool)
         self.tool_probes[tool_probe.tool] = tool_probe
 
-    def setActiveProbe(self, tool_probe):
+    def set_active_probe(self, tool_probe):
+        if self.active_probe == tool_probe:
+            return
+        if self.active_probe:
+            self.active_probe.multi_probe_end()
         self.active_probe = tool_probe
-        self.mcu_probe.setActiveProbe(tool_probe.mcu_probe)
+        if self.active_probe:
+            self.mcu_probe.set_active_probe(tool_probe.mcu_probe)
+        else:
+            self.mcu_probe.set_active_probe(None)
 
-    def queryOpenTools(self):
+    def _query_open_tools(self):
         toolhead = self.printer.lookup_object('toolhead')
         print_time = toolhead.get_last_move_time()
         self.last_query.clear()
@@ -110,7 +130,7 @@ class ToolProbeEndstop:
                 candidates.append(tool_probe)
         return candidates
 
-    def describeToolDetectionIssue(self, candidates):
+    def _describe_tool_detection_issue(self, candidates):
         if len(candidates) == 1 :
             return 'OK'
         elif len(candidates) == 0:
@@ -118,39 +138,40 @@ class ToolProbeEndstop:
         else:
             return  "Multiple probes not triggered: %s" % map(lambda p: p.name, candidates)
 
-    def ensureActiveToolOrFail(self, gcode):
+    def _ensure_active_tool_or_fail(self, gcode):
         if self.active_probe:
             return
-        active_tools = self.queryOpenTools()
+        active_tools = self._query_open_tools()
         if len(active_tools) != 1 :
-            raise gcode.error(self.describeToolDetectionIssue(active_tools))
-        self.setActiveProbe(active_tools[0])
+            raise gcode.error(self._describe_tool_detection_issue(active_tools))
+        self.set_active_probe(active_tools[0])
 
-    def detectActiveTool(self):
-        active_tools = self.queryOpenTools()
+    def _detect_active_tool(self):
+        active_tools = self._query_open_tools()
         if len(active_tools) == 1 :
-            self.setActiveProbe(active_tools[0])
+            self.set_active_probe(active_tools[0])
 
     cmd_SET_ACTIVE_TOOL_PROBE_help = "Set the tool probe that will act as the Z endstop."
     def cmd_SET_ACTIVE_TOOL_PROBE(self, gcmd):
-        probe_nr = gcmd.get_int("TOOL")
+        probe_nr = gcmd.get_int("T")
         if (probe_nr not in self.tool_probes):
             raise gcmd.error("SET_ACTIVE_TOOL_PROBE no tool probe for tool %d" % (probe_nr))
-        self.setActiveProbe(self.tool_probes[probe_nr])
+        self.set_active_probe(self.tool_probes[probe_nr])
 
     cmd_DETECT_ACTIVE_TOOL_PROBE_help = "Detect which tool is active by identifying a probe that is NOT triggered"
     def cmd_DETECT_ACTIVE_TOOL_PROBE(self, gcmd):
-        active_tools = self.queryOpenTools()
+        active_tools = self._query_open_tools()
         if len(active_tools) == 1 :
             active = active_tools[0]
             gcmd.respond_info("Found active tool probe: %s" % (active.name))
-            self.setActiveProbe(active)
+            self.set_active_probe(active)
         else:
-            gcmd.respond_info(self.describeToolDetectionIssue(active_tools))
+            self.set_active_probe(None)
+            gcmd.respond_info(self._describe_tool_detection_issue(active_tools))
 
     cmd_PROBE_help = "Probe Z-height at current XY position"
     def cmd_PROBE(self, gcmd):
-        self.ensureActiveToolOrFail(gcmd)
+        self._ensure_active_tool_or_fail(gcmd)
         self.active_probe.cmd_PROBE(gcmd)
     cmd_QUERY_PROBE_help = "Return the status of the z-probe"
     def cmd_QUERY_PROBE(self, gcmd):
@@ -161,7 +182,7 @@ class ToolProbeEndstop:
         if not self.active_probe:
             return {'name': self.name,
                     'active_tool_probe': None,
-                    'active_tool_number': None,
+                    'active_tool_number': -1,
                     'last_query': False,
                     'last_tools_query': self.last_query,
                     'last_z_result': 0.}
@@ -173,11 +194,11 @@ class ToolProbeEndstop:
         return status
     cmd_PROBE_ACCURACY_help = "Probe Z-height accuracy at current XY position"
     def cmd_PROBE_ACCURACY(self, gcmd):
-        self.ensureActiveToolOrFail(gcmd)
+        self._ensure_active_tool_or_fail(gcmd)
         self.active_probe.cmd_PROBE_ACCURACY(gcmd)
     cmd_PROBE_CALIBRATE_help = "Calibrate the probe's z_offset"
     def cmd_PROBE_CALIBRATE(self, gcmd):
-        self.ensureActiveToolOrFail(gcmd)
+        self._ensure_active_tool_or_fail(gcmd)
         self.active_probe.cmd_PROBE_CALIBRATE(gcmd)
     def cmd_Z_OFFSET_APPLY_PROBE(self, gcmd):
         if not self.active_probe:
@@ -209,39 +230,26 @@ class ToolProbeEndstopWrapper:
     def get_steppers(self):
         return list(self._steppers)
 
-    def setActiveProbe(self, tool_probe_wrapper):
+    def set_active_probe(self, tool_probe_wrapper):
         self.active_probe = tool_probe_wrapper
         # Update Wrappers
-        self.get_mcu = self.active_probe.get_mcu
-        self.home_start = self.active_probe.home_start
+        if self.active_probe:
+            self.get_mcu = self.active_probe.get_mcu
+            self.home_start = self.active_probe.home_start
+        else:
+            self.get_mcu = None
+            self.home_start = None
 
     def query_endstop(self, print_time):
         if not self.active_probe:
-            raise self.printer.command_error("Cannot query endstop - no active tool selected.")
+            raise self.printer.command_error("Cannot query endstop - no active tool probe.")
         return self.active_probe.query_endstop(print_time)
 
     def home_wait(self, home_end_time):
         if not self.active_probe:
-            raise self.printer.command_error("Cannot home wait - no active tool selected.")
+            raise self.printer.command_error("Cannot home wait - no active tool probe.")
         return self.active_probe.home_wait(home_end_time)
 
-    def multi_probe_begin(self):
-        if not self.active_probe:
-            raise self.printer.command_error("Cannot start multi probe - no active tool selected.")
-        self.active_probe.multi_probe_begin()
-
-    def multi_probe_end(self):
-        if not self.active_probe:
-            raise self.printer.command_error("Cannot end multi probe - no active tool selected.")
-        self.active_probe.multi_probe_end()
-    def probe_prepare(self, hmove):
-        if not self.active_probe:
-            raise self.printer.command_error("Cannot prepare for probe - no active tool selected.")
-        self.active_probe.probe_prepare(hmove)
-    def probe_finish(self, hmove):
-        if not self.active_probe:
-            raise self.printer.command_error("Cannot finish probe - no active tool selected.")
-        self.active_probe.probe_finish(hmove)
     def get_position_endstop(self):
         if not self.active_probe:
             return 0.0
