@@ -1,4 +1,4 @@
-# Toolchanger for Voron 2
+# TapChanger - a toolchanger for Voron 2
 A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based on the [Tap](https://github.com/VoronDesign/Voron-Tap) bed probe.
 
 This is independant effort, not affiliated with the Voron team. Use at your own risk.
@@ -7,10 +7,13 @@ This is independant effort, not affiliated with the Voron team. Use at your own 
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
 * Adaptable from [Tap](https://github.com/VoronDesign/Voron-Tap) with mostly just printed parts.
 * Same rigidity and probe accuracy as regular Tap.
+* Mostly staying within the same external printer dimensions.
 * No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
 * Uses the Tap sensor to verify successful dropoffs and pickups.
 
 See [Youtube](https://www.youtube.com/playlist?list=PLqU7kX5nUJDRDw5z0NLwJ22OkV6fbjnSW) for some action.
+
+![Preview](/images/preview.png)
 
 ## Design
 
@@ -49,7 +52,3 @@ V0.2: Tools are changin.
 V0.1: It fits together.
  * Basic hardware assembly and operation works.
  * Real printing - still to be tested.
-
-![Preview](/images/side.png)
-
-![Preview](/images/distribution_box.png)
