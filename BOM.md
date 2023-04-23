@@ -1,5 +1,14 @@
 ## BOM
 
+Frame:
+The front needs to be extended 20 mm forward, and optinally top can be extended 40-60 mm up to give more vertical space.
+For a 350 build, I'm using:
+Front:
+ * 20x20 extrusions: 2x533 + 3x470.
+ * Two right angles to mount the center extrusion.
+Top:
+ * 20x40 extrusion 2x510mm + 2x470mm
+
 Shuttle:
  * 8x M3 5mm slotted pan head screws for the [shuttle assembly](assembly.md), look [like this](https://accu-components.com/us/pan-head-screws/7119-SFP-M3-5-A4).
  * 2x M3x6 countersunk steel screws
