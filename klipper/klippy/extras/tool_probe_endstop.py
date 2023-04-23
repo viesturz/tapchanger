@@ -74,7 +74,6 @@ class ToolProbeEndstop:
         endstops = [es for rail in rails for es, name in rail.get_endstops()]
         if self.mcu_probe in endstops:
             self.multi_probe_end()
-
     def get_offsets(self):
         if self.active_probe:
             return self.active_probe.get_offsets()
@@ -82,7 +81,7 @@ class ToolProbeEndstop:
     def get_lift_speed(self, gcmd=None):
         if self.active_probe:
             return self.active_probe.get_lift_speed(gcmd)
-        return 10.0
+        raise self.printer.command_error("No active tool probe")
     def run_probe(self, gcmd):
         if self.active_probe:
             return self.active_probe.run_probe(gcmd)
@@ -252,6 +251,7 @@ class ToolProbeEndstopWrapper:
 
     def get_position_endstop(self):
         if not self.active_probe:
+            logging.warning("Getting tool probe endstop position before active tool is determined.")
             return 0.0
         return self.active_probe.get_position_endstop()
 
