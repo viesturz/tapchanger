@@ -12,6 +12,7 @@ class ToolProbe(probe.PrinterProbe):
         # The below is a partial copy from PrinterProbe.__init__ except a bunch of registrations moved to the endstop.
         self.printer = config.get_printer()
         self.name = config.get_name()
+        self.gcode = self.printer.lookup_object('gcode')
         self.mcu_probe = mcu_probe
         self.speed = config.getfloat('speed', 5.0, above=0.)
         self.lift_speed = config.getfloat('lift_speed', self.speed, above=0.)

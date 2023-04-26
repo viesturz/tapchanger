@@ -17,6 +17,7 @@ class ToolProbeEndstop:
         self.tool_probes = {}
         self.last_query = {} # map from tool number to endstop state
         self.active_probe = None
+        self.active_tool_number = -1
         self.gcode_move = self.printer.load_object(config, "gcode_move")
 
         # Emulate the probe object, since others rely on this.
@@ -114,8 +115,10 @@ class ToolProbeEndstop:
         self.active_probe = tool_probe
         if self.active_probe:
             self.mcu_probe.set_active_probe(tool_probe.mcu_probe)
+            self.active_tool_number = self.active_probe.tool
         else:
             self.mcu_probe.set_active_probe(None)
+            self.active_tool_number = -1
 
     def _query_open_tools(self):
         toolhead = self.printer.lookup_object('toolhead')
@@ -188,7 +191,7 @@ class ToolProbeEndstop:
         status = self.active_probe.get_status(eventtime)
         status['name'] = self.name
         status['active_tool_probe']  = self.active_probe.name
-        status['active_tool']  = self.active_probe.tool
+        status['active_tool_number']  = self.active_tool_number
         status['last_tools_query']  = self.last_query
         return status
     cmd_PROBE_ACCURACY_help = "Probe Z-height accuracy at current XY position"
