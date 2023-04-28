@@ -38,7 +38,7 @@ Print the parts.
 Press fit a magnet into the pivot.
 Attach it to the dock using m3x12 with thread removed from the tips.
 
-Insert a heatset insert into the ozze pad. Then fill the rest with a high temp silicone and let it cure. Screw into place with an m3x8, add a small piece of sprint under it to allow some adjustment.
+Insert a heatset insert into the ozze pad. Then fill the rest with a high temp silicone and let it cure. Screw into place with an m3x8, add a small piece of spring under it to allow some adjustment.
 
 ![Preview](/images/DockParts.jpg)
 
