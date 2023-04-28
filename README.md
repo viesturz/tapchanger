@@ -28,7 +28,7 @@ In a normal Tap setup, the plug would need to come from above the rail and no ro
 
 # Work site here
 
-This is **work in progress**, nothing has been tested yet. 
+This is **early build**, reliability is still unclear, significant changes likely. 
 
 Done:
 * The main shuttle + Stealthburner mount
@@ -39,8 +39,13 @@ Done:
 * Iron out klipper setup.
 
 WIP: 
-* Make install script.
+* More instructions
+* Mini stelthburner version
 * Test, fix, repeat
+
+## Known issues
+
+* The toolhead has tendency to lean away from the shuttle when picking up, causing failed pickups if alignment is flaky, a revised dock is being considered.
 
 ## Changelog
 
