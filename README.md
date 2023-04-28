@@ -35,19 +35,19 @@ Done:
 * The dock works
 * Put on a printer
 * Make the distribution board
+* Make the first print
+* Iron out klipper setup.
 
 WIP: 
-* Iron out klipper setup.
 * Make install script.
 * Test, fix, repeat
 
 ## Changelog
 
 V0.2: Tools are changin.
- * 20+ toolchanges and countin.
+ * First successful print with ~50 changes.
  * Completely new dock, the rest slightly reworked.
  * Initial klipper setup. Tool auto-detection. Tap Z probe works across tools.
-
 
 V0.1: It fits together.
  * Basic hardware assembly and operation works.
