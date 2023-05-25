@@ -45,9 +45,13 @@ WIP:
 
 ## Known issues
 
-* The toolhead has tendency to lean away from the shuttle when picking up, causing failed pickups if alignment is flaky, a revised dock is being considered.
+* Tool Pickup Needs quite precise Y alignment to work reliably.
 
 ## Changelog
+
+V0.2.5: Shuttle Design tweaks
+ * MGN12 mounting position on shuttle to work with Mini SB.
+ * Extra alignment guide to help line up with the rail.
 
 V0.2: Tools are changin.
  * First successful print with ~50 changes.
