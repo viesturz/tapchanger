@@ -27,18 +27,19 @@ Maybe one day Klipper will support power cycle staggering making this less of a 
 ## Canbus speed
 
 Canbus supports a range of speeds up to 1mbs.
-We are using an unusual topology with fairly long branches from from the main bus, which causes extra signal reflections. There are quite a few data sheeds describing the maximum branch length for each speed, I have seen very conservative saying 30cm max for any speed to very relaxed of 1.5M for 1mbs.
+We are using an unusual topology with fairly long branches from from the main bus, which causes extra signal reflections. There are quite a few data sheets describing the maximum branch length for each speed, I have seen very conservative saying 30cm max for any speed to very relaxed of 1.5M for 1mbs.
 
 Our branch length from the distribution box is approx 60cm. That definately seems iffy for 1mbs and seems confortable for 500kbs.
 That is what I'm running. And getting about 5% utilization running two tooleahds so seems plenty of headroom.
 
-
-# Canbus Toolhead boards
+## Canbus Toolhead boards
 
 There are several extruder boards that are specifically designed for Stealthburner. 
 Most notably [EBB SB2209](https://biqu.equipment/products/bigtreetech-ebb-sb2209-can-v1-0) from Bigtreetech and [SB2040](https://www.google.com/search?q=SB2040) from Mellow fly. I have had good success with both.
 
 Similary for Mini stealthburner there are smaller versions available, like [EBB36](https://biqu.equipment/products/bigtreetech-ebb-36-42-can-bus-for-connecting-klipper-expansion-device).
+
+All of those boards can be used either in Canbus or USB mode, changeable by flashing the appropriate firmware. If you are uncomfortable with Canbus, and fine with running two more wires to each hotend, you can use USB mode with a USB hub.
 
 The flashing and setup process of those boards can be a bit involved, the manufacturers instructions are okay, but genereally require a Windows machine to follow. There are [some instructions](https://mpx.wiki/flash-m8p-and-ebb-sb-toolboard) out there to flash directly from Raspberry. 
 
@@ -71,7 +72,7 @@ My rule of thumb: Sum up all your hotend heaters + ~10w on top for each hotend +
 
 I'm running oversized 12gauge cables from distribution box to PSU. Mainly because the next ones I had around where significanly thinner.
 
-And running USB C charging cables from hotend to the distribution box. Get ones that are arvertised for 100W charging. They are supposed to handle 5A sustained. Which 120w - more than enough for most hotends. Rapido or other 100w+ hotends are a bit marginal.
+And running USB C charging cables from hotend to the distribution box. Get ones that are arvertised for 100W charging. They are supposed to handle 5A sustained. That is 120w - more than enough for most hotends. Rapido or other 100w+ hotends are a bit marginal.
 The USB cables are significantly more lightweight and felxible than premade Canbus harnesses and with Silicone sleeving should survive long enough. USB data cables are also twisted pair, making it a nice match.
 
 ![Preview](/images/Usb-Cable.jpg)
