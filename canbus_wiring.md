@@ -78,3 +78,18 @@ The USB cables are significantly more lightweight and felxible than premade Canb
 ![Preview](/images/Usb-Cable.jpg)
 
 For Distribution box to Usb2Can, I just manually twisted together two wires.
+
+## Connecting via the distribution board PCB
+
+The `electronics` folder contains a PCB that can be used to connect the canbus cables together. It has 7 connectors: one to your controller board, and 6 for extruders. The PCB itself can be ordered online (e.g. from PCBWay, by uploading `Distribution_Board_cam_output.zip` which contains gerbers). It is meant to accomodate 4-pin JST-XH male connectors (e.g. [these from amazon](https://a.co/d/690GuEG)).
+
+![Preview](/images/distribution_board_top.jpg)
+![Preview](/images/distribution_board_bottom.jpg)
+
+For a voron 2.4 350mm build, cutting the cables to 1 meter in length should be long enough to go from the toolhead to the distribution board. If you are using BTT SB2209/SB2240 boards, they come with a wire long enough that you will have spare length to connect the distribution board to your controller as well. Simply crimp the female JST-XH connectors with a crimping tool like [this one](https://a.co/d/giwkw9a).
+
+![Preview](/images/distribution_board_cable.jpg)
+
+Use some double-sided tape and fit the board inside the distribution box:
+
+![Preview](/images/distribution_board_installed.jpg)
