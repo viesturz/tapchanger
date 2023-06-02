@@ -11,8 +11,8 @@ Top:
  * 20x40 extrusion 2x510mm + 2x470mm
 
 ### Shuttle
- * 8x M3 5mm slotted pan head screws for the [shuttle assembly](assembly.md), look [like this](https://accu-components.com/us/pan-head-screws/7119-SFP-M3-5-A4).
- * 2x M3x6 countersunk steel screws
+ * 8x M3 5mm BHSC for the [shuttle assembly](assembly.md).
+ * 2x M3x6 countersunk steel screws (must be magnetic).
  * 1x 6x3mm round magnet for the carriage plug.
  
 ### Each Toolhead
