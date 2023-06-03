@@ -14,7 +14,7 @@ Then screw in the MGN9 carriage.
 
 Then attach your belts and locate the shuttle over the main carriage.
 
-And lastly and most tricky, use a small flat screwdriver to screw in the MGN12 carriage. Take turns and going around the part and go 1 revolution at a time.
+Use a ball end allen key inserted at a slight angle to screw in the MGN12 carriage.
 
 ![Preview](/images/ShuttleMounted.jpg)
 
