@@ -11,7 +11,7 @@ Top:
  * 20x40 extrusion 2x510mm + 2x470mm
 
 ### Shuttle
- * 8x M3 5mm BHSC for the [shuttle assembly](assembly.md).
+ * 8x M3 8mm BHSC for the [shuttle assembly](assembly.md). There is a 6mm option for those upgrading from a Voron Tap BOM.
  * 2x M3x6 countersunk steel screws (must be magnetic).
  * 1x 6x3mm round magnet for the carriage plug.
  
