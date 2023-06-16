@@ -40,7 +40,7 @@ Done:
 
 WIP: 
 * More instructions
-* Mini stelthburner version
+* Mini stelthburner version, see [Tapchanger lite](https://github.com/viesturz/TapChanger-lite)
 * Test, fix, repeat
 
 ## Known issues
