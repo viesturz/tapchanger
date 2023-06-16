@@ -12,3 +12,28 @@ Long term I'm looking to upstream the changes in klipper and Klipper_ToolChanger
 - install [ToolChanger extension](https://github.com/TypQxQ/Klipper_ToolChanger)
 - copy the klippy contents to  ${KLIPPER_PATH}/klippy/
 - use the config as a template for your own config
+- optionally - setup a nozzle [alignment probe](https://github.com/viesturz/NozzleAlign)
+
+## Z offsets
+ 
+ The Tap probe does not offer a true Z home. Instead it relies on build surface as Z=0. On the other hand, the tool changing needs reasonably repeatable Z position.
+
+ So this is a bit more complicated than yor typical setup:
+
+  - Printer Z=0 - is tool independant, all toolchange moves happen in this space.
+  - Tool probe trigger Z offset - distance betwen nozzle touching the bed and probe triggering - is tool specific, but nozzle independant. Specified in tool_probe.z_offset.
+  - Tool Z offset - is tool and nozzle specific. Specified in tool.offset.
+
+![Preview](/images/offsets.png)
+
+When **homing** the Z=0 is determined from probe probe tigger location - probe trigger offset - tool Z offset.
+For Tool 0 that is the same as normal Tap homing. For other tools the extra tool offset is substracted.
+Klipper unfortinately assumes that the Z=0 is a fixed distance from the endstop trigger location, so there are some tricks in homing.cfg to adjust this in post.
+
+When **printing**, the Gcode offset is = tool Z offset.
+
+When **changing tools**, Gcode offset = 0.
+
+## TODO
+Might want be useful to change probe trigger offsets to be against Z=0, instead of current tool. That would save some calculations, but make manual calibration more difficult.
+
