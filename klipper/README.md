@@ -10,9 +10,12 @@ Long term I'm looking to upstream the changes in klipper and Klipper_ToolChanger
 ## Installing
 
 - install [ToolChanger extension](https://github.com/TypQxQ/Klipper_ToolChanger)
-- copy the klippy contents to  ${KLIPPER_PATH}/klippy/
 - use the config as a template for your own config
-- optionally - setup a nozzle [alignment probe](https://github.com/viesturz/NozzleAlign)
+
+Optional:
+
+- autodetect active tool copy the toolklippy/tool_probe* files to  ${KLIPPER_PATH}/klippy/
+- nozzle [alignment probe](https://github.com/viesturz/NozzleAlign)
 
 ## Z offsets
  
