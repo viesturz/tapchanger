@@ -3,6 +3,8 @@ A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based
 
 This is independant effort, not affiliated with the Voron team. Use at your own risk.
 
+Currently Tapchanger development is **on pause**, I'm working on [Tapchanger lite](https://github.com/viesturz/TapChanger-lite), still happy to accept pull requests.
+
 ## Features
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
 * Adaptable from [Tap](https://github.com/VoronDesign/Voron-Tap) with mostly just printed parts.
@@ -40,12 +42,13 @@ Done:
 
 WIP: 
 * More instructions
-* Mini stelthburner version, see [Tapchanger lite](https://github.com/viesturz/TapChanger-lite)
+* Mini stelthburner version.
 * Test, fix, repeat
 
 ## Known issues
 
 * Tool Pickup Needs quite precise Y alignment to work reliably.
+* Crashes will send balls flying.
 
 ## Changelog
 
