@@ -28,9 +28,7 @@ This is solved by pushing in a supporting TPU plug while the shuttle is travelin
 
 In a normal Tap setup, the plug would need to come from above the rail and no room for it there. So the MGN9 rail is flipped around - the carriage is on the shuttle side and the rail is on the toolhead side, allowing the plug to sit below the Tap rail in the dock.
 
-# Work site here
-
-This is **early build**, reliability is still unclear, significant changes likely. 
+# Current status
 
 Done:
 * The main shuttle + Stealthburner mount
