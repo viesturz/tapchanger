@@ -4,6 +4,7 @@ A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based
 This is independant effort, not affiliated with the Voron team. Use at your own risk.
 
 Currently Tapchanger development is **on pause**, I'm working on [Tapchanger lite](https://github.com/viesturz/TapChanger-lite), still happy to accept pull requests.
+If you have questions, feel free to reach out on [Discord](https://discord.gg/xmDWrYGwVJ).
 
 ## Features
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
