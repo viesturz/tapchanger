@@ -46,7 +46,7 @@ Listing extra items beyond stock toolhead
  - 2x m3x6 SHCS screws
  - some glue to hold the rods/pads in place, PVA glue works as a start, exoxy for more permanent solution.
  - *Pads version*: 4x steel pads - 10x4mmx1.5mm, im cutting them from a stock piece from local hw store
- - *Rods version*: 2x 3mm steel rod, 25mm long 
+ - *Rods version*: 2x 3mm steel rod, 26mm long 
 
 ### Dock
 
