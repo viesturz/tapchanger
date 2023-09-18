@@ -2,7 +2,7 @@
 
 A nozzle Z probe + toolchanger for Voron 2.
 
-![Preview](/Images/hotend-shuttle.jpg)
+![Preview](/images/hotend-shuttle.jpg)
 
 ## Features
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
