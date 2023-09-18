@@ -6,7 +6,7 @@ The plastic parts are bearing quite some load, so printing them accurately key t
 
 ASA is the preferred filament right now, providing generally better rigidity than ABS, especially when kept under load. I have had good success with Prusament ASA.
 
-PC-ABS is an option, will update after testing it.
+PC-ABS is an option, drop me a line if you have success with that.
 
 ### Parameters
 
@@ -14,11 +14,13 @@ Use usual [Voron print settings](https://docs.vorondesign.com/sourcing.html#prin
 
  - 80% infill.
  - Supports on bed plate only.
- - Extrusion multiplier - on point or slightly under. The shuttle and hotend plate have ~0.5 mm clearance between them, overextrusion will cause problems.
  - (optional) Enable ironing.
+ - support interface layers: 2
+ - support interface spacing: 0.12
+ - I'm printing with organic suppots, but anythign goes
 
 ### Cleanup
 
-You will need to clean up some supports. Ideally if you can print with PETG or soluable supports.
+You will need to clean up some supports.  Flush cut pliers will get them removed just fine.
 
-Flush cut pliers , exacto knife and some patience will get them removed just fine.
+Optionally can print with PETG or soluable supports, but I would not bother.
