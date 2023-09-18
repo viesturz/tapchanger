@@ -8,14 +8,14 @@ A nozzle Z probe + toolchanger for Voron 2.
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
 * Supports Mini Stealthburner for more compact footprint - can fit 6 hotends in 350 frame.
 * Adaptable from [Tap](https://github.com/VoronDesign/Voron-Tap) with mostly just printed parts.
-* Same rigidity and probe accuracy as regular Tap.
+* Same [rigidity](https://youtu.be/mGRXtK9F408) and probe accuracy as regular Tap.
 * Mostly staying within the same external printer dimensions.
 * No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
 * Uses the Tap sensor to verify successful dropoffs and pickups.
 
 # Build guide
 
-Overall I would recommend to first make a working single hotend printer:
+I would recommend to install a working single hotend printer first:
 
 * Check the [BOM](./Bom.md).
 * [Print](./Print%20Guide.md) the parts.
