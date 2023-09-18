@@ -12,24 +12,20 @@ A nozzle Z probe + toolchanger for Voron 2.
 * No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
 * Uses the Tap sensor to verify successful dropoffs and pickups.
 
-# How does this work?
-
-It's essentially an oversized linear rail, that supports only ~4 mm of travel. The steel rail is replaced by bearing riding on rods.
-
-In addition it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
-
-![Preview](/images/explain1.png)
-![Preview](/images/explain2.png)
-
 # Build guide
 
-Check the [BOM](./Bom.md).
+Overall I would recommend to first make a working single hotend printer:
 
-[Print](./Print%20Guide.md) the parts.
+* Check the [BOM](./Bom.md).
+* [Print](./Print%20Guide.md) the parts.
+* [Assemble](./Assembly.md) it.
 
-Assembly instructions coming...
+Multiple tools setup:
 
-Configure [Klipper](./klipper/README.md).
+* You will need a umbilical system supporting multiple hotends, I am [using this](https://github.com/viesturz/Voron2Toolbox)
+* Install [docks](Dock.md).
+* Configure [Klipper](./klipper/README.md).
+* Calibrate the offsets. I'm using [this](https://github.com/viesturz/NozzleAlign).
 
 # Community
 
@@ -42,6 +38,16 @@ See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5n
 - Basic models from [Voron Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) and [Voron 0](https://github.com/VoronDesign/Voron-0).
 - Mini SB Orbiter cowling form [mozartlovescats](https://www.printables.com/model/366337-voron-02-orbiter-20-trianglelab-chc-mini-stealthbu).
 - Mini SB LGX lite cowling form [MC](https://www.printables.com/model/395933-voron-02-mini-stealthburner-remix-for-lgx-light-ex/files).
+
+
+# How does this work?
+
+It's essentially an oversized linear rail, that supports only ~4 mm of travel. The steel rail is replaced by bearing riding on rods.
+
+In addition it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
+
+![Preview](/images/explain1.png)
+![Preview](/images/explain2.png)
 
 # Revision history:
 
