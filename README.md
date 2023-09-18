@@ -1,63 +1,71 @@
-# TapChanger - a toolchanger for Voron 2
-A toolchanger system For [Voron 2](https://github.com/VoronDesign/Voron-2) based on the [Tap](https://github.com/VoronDesign/Voron-Tap) bed probe.
+# Tapchanger
 
-This is independant effort, not affiliated with the Voron team. Use at your own risk.
+A nozzle Z probe + toolchanger for Voron 2.
 
-## Features
-* Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
-* Adaptable from [Tap](https://github.com/VoronDesign/Voron-Tap) with mostly just printed parts.
-* Same rigidity and probe accuracy as regular Tap.
-* Mostly staying within the same external printer dimensions.
-* No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
-* Uses the Tap sensor to verify successful dropoffs and pickups.
+![Preview](/Images/hotend-shuttle.jpg)
 
-See [Youtube](https://www.youtube.com/playlist?list=PLqU7kX5nUJDRDw5z0NLwJ22OkV6fbjnSW) for some action.
+# How does this work?
 
-![Preview](/images/preview.jpg)
+It's essentially an oversized linear rail, that supports only ~4 mm of travel. The steel rail is replaced by bearing riding on rods.
 
-## Design
+In addition it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
 
-Toolheads are docked in an extra extrusion at the front of the printer. The toolhead is rested on a dock and as the shuttle moves down toolhead slides off the Tap rail.
+![Preview](/Images/explain1.png)
+![Preview](/Images/explain2.png)
 
-Cudos for inspiration to [WP-Daksh](https://github.com/ankurv2k6/wp-daksh-toolchanger) and the Voron India discord.
+# Build guide
 
-The Tap probe is almost working as a toolchanger out of the box, the main issue is that a naked linear carriage is prone to loosing balls.
-This is solved by pushing in a supporting TPU plug while the shuttle is traveling between the tools.
+Check the [BOM](./Bom.md).
 
-In a normal Tap setup, the plug would need to come from above the rail and no room for it there. So the MGN9 rail is flipped around - the carriage is on the shuttle side and the rail is on the toolhead side, allowing the plug to sit below the Tap rail in the dock.
+[Print](./Print%20Guide.md) the parts.
 
-# Work site here
+Assembly instructions coming...
 
-This is **early build**, reliability is still unclear, significant changes likely. 
+Configure [Klipper](./klipper/README.md).
 
-Done:
-* The main shuttle + Stealthburner mount
-* The dock works
-* Put on a printer
-* Make the distribution board
-* Make the first print
-* Iron out klipper setup.
+# Community
 
-WIP: 
-* More instructions
-* Mini stelthburner version, see [Tapchanger lite](https://github.com/viesturz/TapChanger-lite)
-* Test, fix, repeat
+Improvement ideas - bugs, pull requests welcome. Find me on [Voron Toolchangers Discord](https://discord.gg/xmDWrYGwVJ), or file bugs here.
 
-## Known issues
+See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5nUJDRDw5z0NLwJ22OkV6fbjnSW).
 
-* Tool Pickup Needs quite precise Y alignment to work reliably.
+# Credits
 
-## Changelog
+- Basic models from [Voron Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) and [Voron 0](https://github.com/VoronDesign/Voron-0).
+- Mini SB Orbiter cowling form [mozartlovescats](https://www.printables.com/model/366337-voron-02-orbiter-20-trianglelab-chc-mini-stealthbu).
+- Mini SB LGX lite cowling form [MC](https://www.printables.com/model/395933-voron-02-mini-stealthburner-remix-for-lgx-light-ex/files).
 
-V0.2.5: Shuttle Design tweaks
- * MGN12 mounting position on shuttle to work with Mini SB.
- * Extra alignment guide to help line up with the rail.
+# Revision history:
 
-V0.2: Tools are changin.
- * First successful print with ~50 changes.
- * Completely new dock, the rest slightly reworked.
- * Initial klipper setup. Tool auto-detection. Tap Z probe works across tools.
+## V2.1 - Rods fixes.
 
-V0.1: It fits together.
- * Basic hardware assembly and operation works.
- * Real printing - still to be tested.
+Various fixes to refine the rods version. Ready for general testing.
+
+## V2 - Rods version added.
+
+A new experimental version using 3mm rods. See -rods files. Shuttle and mount plates changed, the rest is same.
+
+![Preview](/Images/rods-photo.jpg)
+
+- Easier to assemble
+- Tension adjustment screws easily available
+- Runs smoother
+- Using smaller 3x8x3 bearings - saves 5 grams and even more rigid.
+- Even load distribution between the bearings by adjusting the angles to 26 and 64 degrees.
+
+## V1.1 - Verified and cleaned up.
+
+- Minor model tweaks for better fit and printability.
+
+
+## V1 - This should work
+
+- Redesigned and optimized - not compatible with V0
+- Significanly more rigid
+- Supports both Mini and full size Stealthburner
+
+## V0 - Initial drop
+ 
+ - It can print and looks reasonably rigid
+ - ~10 Tool chnages so far
+ - Initial dock, that looks okay for the job

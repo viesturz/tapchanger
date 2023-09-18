@@ -1,33 +1,55 @@
-## BOM
+# BOM
 
-### Frame
-
-The front needs to be extended 20 mm forward, and optinally top can be extended 40-60 mm up to give more vertical space.
-For a 350 build, I'm using:
-Front:
- * 20x20 extrusions: 2x533 + 3x470.
- * Two right angles to mount the center extrusion.
-Top:
- * 20x40 extrusion 2x510mm + 2x470mm
-
-### Shuttle
- * 8x M3 8mm BHSC for the [shuttle assembly](assembly.md). There is a 6mm option for those upgrading from a Voron Tap BOM.
- * 2x M3x6 countersunk steel screws (must be magnetic).
- * 1x 6x3mm round magnet for the carriage plug.
+## Shuttle
  
-### Each Toolhead
- * A Tap kit + a Canbus enabled Stealthburner toolhead of your choice
- * 2x 5x2 round magnet, can use a 6x3mm magnet, but need to mod the bottom stealthburner screw holes to match.
- * **5amps** USB chargning cable, look for the ones supporting 100w, 1m, used for CANbus. Feel free to use other cables, I just like them being slim and thin.
+ - X6 [F623-RS](https://google.com/search?q=F623-RS) Bearings, flanges are optional. Same as regular Voron BOM.
+ - X6 M3x8 buttonhead screws, m3 washers and heatset inserts.
+ - 6x3mm round magnet
 
-### Each Dock
- * 2x M3x12 screws with thread dremeled off for the last 3 mm
- * 1x 6x3 round magnet
- * 3x m3x12, 1x m3x10
- * Some silicone for the nozzle pad
- * a small piece of spring to hold up the nozzle pad.
+## Shuttle
  
-### Distribution board
- * Prototyping board ~100mm x 4 holes
- * 6x KF128 2.54mm pitch 4pin PCB screw Terminal block, rated for 6-10amps.
- * 2x m3x12, 2x heatset inserts
+ - X6 [MR83zz](https://google.com/search?q=MR83zz) bearings.
+ - X6 M3x8 buttonhead screws, m3 washers and heatset inserts.
+ - 6x3mm round magnet
+
+## Mini SB
+
+Listing extra items beyond stock toolhead
+
+### Toolhead
+
+ - Tap optical sensor - optional for toolhead 2 and beyond
+ - 2x m3x4 buttonhead screws to secure the sensor
+ - 4x heatset inserts
+ - 6x3 round magnet
+ - 2x 5x2 round magnets - attached to the miniSB cowling screw heads
+ - 2x m3x6 SHCS screws
+ - some glue to hold the rods/pads in place, PVA glue works as a start, exoxy for more permanent solution.
+ - *Pads version*: 4x steel pads - 10x4mmx1.5mm, im cutting them from a stock piece from local hw store
+ - *Rods version*: 2x 3mm steel rod, 25mm long 
+
+### Dock
+
+ - 2x m3x6, 1x m3x8
+ - 2x heatset inserts
+ - Some high temp silicone for the nozzle pad
+ - a small piece of spring to hold up the nozzle pad
+
+## Stealthburner
+
+### Toolhead
+
+ - Tap optical sensor - optional for 2 and beyond
+ - 2x m3x6 SHCS screws
+ - 6x heatset inserts
+ - some glue to hold the pads in place, PVA glue works as a start, exoxy for more permanent solution.
+ - 6x3 round magnet
+ - 2x 5x2 round magnets - attached to the SB cowling screw heads
+ - *Pads version*: 4x steel pads - 10x4mmx1.5mm, im cutting them from a stock piece from local hw store
+ - *Rods version*: 2x 3mm steel rod, 25mm long 
+
+### Dock
+
+ - 2x m3x6, 1x m3x8
+ - Some high temp silicone for the nozzle pad
+ - a small piece of spring to hold up the nozzle pad

@@ -27,6 +27,7 @@ class ToolsCalibrate:
         self.spread = config.getfloat('spread', 5.0)
         self.lower_z = config.getfloat('lower_z', 0.5)
         self.lift_z = config.getfloat('lift_z', 1.0)
+        self.trigger_to_bottom_z = config.getfloat('trigger_to_bottom_z', default=0.0)
         self.lift_speed = config.getfloat('lift_speed', self.probe_multi_axis.lift_speed)
         self.final_lift_z = config.getfloat('final_lift_z', 4.0)
         self.sensor_location = None
@@ -42,27 +43,27 @@ class ToolsCalibrate:
         self.gcode.register_command('TOOL_CALIBRATE_PROBE_OFFSET', self.cmd_TOOL_CALIBRATE_PROBE_OFFSET,
                                     desc=self.cmd_TOOL_CALIBRATE_PROBE_OFFSET_help)
 
-    def probe_xy(self, toolhead, top_pos, direction, gcmd):
+    def probe_xy(self, toolhead, top_pos, direction, gcmd, samples = None):
         offset = direction_types[direction]
         start_pos = list(top_pos)
         start_pos[offset[0]] -= offset[1] * self.spread
         toolhead.manual_move([None, None, top_pos[2]+self.lift_z], self.lift_speed)
         toolhead.manual_move([start_pos[0], start_pos[1], None], self.travel_speed)
         toolhead.manual_move([None, None, top_pos[2]-self.lower_z], self.lift_speed)
-        return self.probe_multi_axis.run_probe(direction, gcmd)[offset[0]]
+        return self.probe_multi_axis.run_probe(direction, gcmd, samples = samples)[offset[0]]
 
-    def calibrate_xy(self, toolhead, top_pos, gcmd):
-        left_x = self.probe_xy(toolhead, top_pos, 'x+', gcmd)
-        right_x = self.probe_xy(toolhead, top_pos, 'x-', gcmd)
-        near_y = self.probe_xy(toolhead, top_pos, 'y+', gcmd)
-        far_y = self.probe_xy(toolhead, top_pos, 'y-', gcmd)
+    def calibrate_xy(self, toolhead, top_pos, gcmd, samples = None):
+        left_x = self.probe_xy(toolhead, top_pos, 'x+', gcmd, samples = samples)
+        right_x = self.probe_xy(toolhead, top_pos, 'x-', gcmd, samples = samples)
+        near_y = self.probe_xy(toolhead, top_pos, 'y+', gcmd, samples = samples)
+        far_y = self.probe_xy(toolhead, top_pos, 'y-', gcmd, samples = samples)
         return [(left_x + right_x) / 2., (near_y + far_y) / 2.]
 
     def locate_sensor(self, gcmd):
         toolhead = self.printer.lookup_object('toolhead')
         position = toolhead.get_position()
-        downPos = self.probe_multi_axis.run_probe("z-", gcmd)
-        center_x, center_y = self.calibrate_xy(toolhead, downPos, gcmd)
+        downPos = self.probe_multi_axis.run_probe("z-", gcmd, samples = 1)
+        center_x, center_y = self.calibrate_xy(toolhead, downPos, gcmd, samples = 1)
 
         toolhead.manual_move([None, None, downPos[2]+self.lift_z], self.lift_speed)
         toolhead.manual_move([center_x, center_y, None], self.travel_speed)
@@ -109,7 +110,7 @@ class ToolsCalibrate:
         # now move down with the tool probe
         probe_z = self.probe.run_probe(gcmd)[2]
 
-        z_offset = probe_z - nozzle_z
+        z_offset = probe_z - nozzle_z + self.trigger_to_bottom_z
         self.last_probe_offset = z_offset
         self.gcode.respond_info(
             "%s: z_offset: %.3f\n"
@@ -223,7 +224,7 @@ class PrinterProbeMultiAxis:
         # even number of samples
         return self._calc_mean(axis_sorted[middle - 1:middle + 1])
 
-    def run_probe(self, direction, gcmd, speed_ratio = 1.0):
+    def run_probe(self, direction, gcmd, speed_ratio = 1.0, samples = None):
         speed = gcmd.get_float("PROBE_SPEED", self.speed, above=0.) * speed_ratio
         if direction not in direction_types:
             raise self.printer.command_error("Wrong value for DIRECTION.")
@@ -235,7 +236,7 @@ class PrinterProbeMultiAxis:
         logging.info("run_probe axis = %d, sense = %d" % (axis, sense))
 
         lift_speed = self.get_lift_speed(gcmd)
-        sample_count = gcmd.get_int("SAMPLES", self.sample_count, minval=1)
+        sample_count = gcmd.get_int("SAMPLES", samples if samples else self.sample_count, minval=1)
         sample_retract_dist = gcmd.get_float("SAMPLE_RETRACT_DIST",
                                              self.sample_retract_dist, above=0.)
         samples_tolerance = gcmd.get_float("SAMPLES_TOLERANCE",
