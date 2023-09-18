@@ -21,6 +21,7 @@ Print the back plate.
 Use a 3mm drill bit on slow speed to clear out any loose overhangs from the rod holes.
 
 Cut rods to length and push in, they should slightly extend past the plastic.
+I'm adding some PVA glue to the holes to hold them but still be able to remove if needed.
 
 Thread in 2 m8 socket head screws at the bottom. All the way in should be too loose, back up both a bit at the time to get a snug fit.
 
