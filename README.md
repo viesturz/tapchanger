@@ -2,10 +2,11 @@
 
 A nozzle Z probe + toolchanger for Voron 2.
 
-![Preview](/images/hotend-shuttle.jpg)
+![Preview](/images/rods-photo.jpg)
 
 ## Features
 * Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
+* Supports Mini Stealthburner for more compact footprint - can fit 6 hotends in 350 frame.
 * Adaptable from [Tap](https://github.com/VoronDesign/Voron-Tap) with mostly just printed parts.
 * Same rigidity and probe accuracy as regular Tap.
 * Mostly staying within the same external printer dimensions.
