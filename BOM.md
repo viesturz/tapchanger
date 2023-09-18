@@ -23,7 +23,7 @@
  - 6x3 round magnet
  - 2x 5x2 round magnets - attached to the SB cowling screw heads
  - *Pads version*: 4x steel pads - 10x4mmx1.5mm, im cutting them from a stock piece from local hw store
- - *Rods version*: 2x 3mm steel rod, 25mm long 
+ - *Rods version*: 2x 3mm steel rod, 26mm long 
 
 ### Dock
 
