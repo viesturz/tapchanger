@@ -18,8 +18,8 @@ It's essentially an oversized linear rail, that supports only ~4 mm of travel. T
 
 In addition it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
 
-![Preview](/Images/explain1.png)
-![Preview](/Images/explain2.png)
+![Preview](/images/explain1.png)
+![Preview](/images/explain2.png)
 
 # Build guide
 
@@ -53,7 +53,7 @@ Various fixes to refine the rods version. Ready for general testing.
 
 A new experimental version using 3mm rods. See -rods files. Shuttle and mount plates changed, the rest is same.
 
-![Preview](/Images/rods-photo.jpg)
+![Preview](/images/rods-photo.jpg)
 
 - Easier to assemble
 - Tension adjustment screws easily available
