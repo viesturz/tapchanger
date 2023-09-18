@@ -27,7 +27,7 @@ Optional:
   - Tool probe trigger Z offset - distance betwen nozzle touching the bed and probe triggering - is tool specific, but nozzle independant. Specified in tool_probe.z_offset.
   - Tool Z offset - is tool and nozzle specific. Specified in tool.offset.
 
-When **homing** the Z=0 is determined from probe probe tigger location - probe trigger offset - tool Z offset.
+When **homing** the Z=0 is determined from probe tigger location - probe trigger offset - tool Z offset.
 For Tool 0 that is the same as normal Tap homing. For other tools the extra tool offset is substracted.
 Klipper unfortinately assumes that the Z=0 is a fixed distance from the endstop trigger location, so there are some tricks in homing.cfg to adjust this in post.
 
