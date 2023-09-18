@@ -8,7 +8,7 @@
 
 ## Shuttle - pads
  
- - X6 [F623-RS](https://google.com/search?q=F623-RS) Bearings, flanges are optional. Same as regular Voron BOM.
+ - X6 [F623-ZZ](https://google.com/search?q=F623-ZZ) Bearings. Can also use the flagned version form regular Voron BOM.
  - X6 M3x10 buttonhead screws, m3 washers and heatset inserts.
  - 6x3mm round magnet
 
