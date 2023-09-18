@@ -8,7 +8,7 @@
 
 ## Shuttle - pads
  
- - X6 [623](https://google.com/search?q=623) Bearings. Can also use the flanged version form regular Voron BOM.
+ - X6 [623](https://google.com/search?q=623+bearing) Bearings. Can also use the flanged version form regular Voron BOM.
  - X6 M3x10 buttonhead screws, m3 washers and heatset inserts.
  - 6x3mm round magnet
 
@@ -16,7 +16,7 @@
 
 ### Toolhead
 
- - Tap optical sensor - optional for 2 and beyond
+ - [OptoTap](https://google.com/search?q=optotap) sensor - optional for 2 and beyond
  - 2x m3x6 SHCS screws
  - 6x heatset inserts
  - some glue to hold the pads in place, PVA glue works as a start, exoxy for more permanent solution.
