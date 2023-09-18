@@ -16,7 +16,7 @@ Print the part, thread in two 10mm steel screws into the holes. Stainless does n
 
 Mount on the profile.
 
-![Alt text](/images/dock.png)
+![Alt text](/images/dock.jpg)
 
 # Nozzle pad
 
