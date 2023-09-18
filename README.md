@@ -17,7 +17,7 @@ A nozzle Z probe + toolchanger for Voron 2.
 
 I would recommend to install a working single hotend printer first:
 
-* Check the [BOM](./Bom.md).
+* Check the [BOM](./BOM.md).
 * [Print](./Print%20Guide.md) the parts.
 * [Assemble](./Assembly.md) it.
 
