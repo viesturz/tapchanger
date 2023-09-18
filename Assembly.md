@@ -30,3 +30,4 @@ General rule of thumb - the tightest that runs well. There shuld be some back pr
 
 When clicking together, both bolts should contact the bearings simultaneously. Them being off too much will cause some unwanted twisting loads. I have not paid much attention to getting this exactly right and have not had any problems.
 
+Final step - add a drop of CA glue at the base for the scew head to lock it in place.
