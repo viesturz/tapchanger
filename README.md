@@ -52,6 +52,17 @@ In addition it's a kinematic mount, meaning that it's self aligning and there is
 
 # Revision history:
 
+## V2.2 - Square rods version added.
+
+Option to use square rods for better contact surface for the bearings.  Shares the shuttle and bearings with rods.
+
+There are now total of 3 versions:
+ - Plates - bigger bearings, more work to make the plates and assemble. The rolling surface is not great. Very rigid.
+ - Rods - smaller bearings, easiest to assemble, but more flex.
+ - Square rods - middle ground between plates and rods, the rigidity testing was done with this.
+
+![Versions](/images/versions.jpg)
+
 ## V2.1 - Rods fixes.
 
 Various fixes to refine the rods version. Ready for general testing.
