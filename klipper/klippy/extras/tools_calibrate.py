@@ -23,6 +23,7 @@ class ToolsCalibrate:
         self.probe_multi_axis = PrinterProbeMultiAxis(config, ProbeEndstopWrapper(config,'x'),
                                  ProbeEndstopWrapper(config, 'y'),
                                  ProbeEndstopWrapper(config, 'z'))
+        self.probe_name = config.get('probe', 'probe')
         self.travel_speed = config.getfloat('travel_speed', 10.0, above=0.)
         self.spread = config.getfloat('spread', 5.0)
         self.lower_z = config.getfloat('lower_z', 0.5)
@@ -105,10 +106,11 @@ class ToolsCalibrate:
     cmd_TOOL_CALIBRATE_PROBE_OFFSET_help = "Calibrate the tool probe offset to nozzle tip"
     def cmd_TOOL_CALIBRATE_PROBE_OFFSET(self, gcmd):
         toolhead = self.printer.lookup_object('toolhead')
+        probe = self.printer.lookup_object(self.probe_name)
         start_pos = toolhead.get_position()
         nozzle_z = self.probe_multi_axis.run_probe("z-", gcmd, speed_ratio=0.5)[2]
         # now move down with the tool probe
-        probe_z = self.probe.run_probe(gcmd)[2]
+        probe_z = probe.run_probe(gcmd)[2]
 
         z_offset = probe_z - nozzle_z + self.trigger_to_bottom_z
         self.last_probe_offset = z_offset
