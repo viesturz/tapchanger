@@ -41,6 +41,8 @@ class ToolsCalibrate:
                                     desc=self.cmd_TOOL_LOCATE_SENSOR_help)
         self.gcode.register_command('TOOL_CALIBRATE_TOOL_OFFSET', self.cmd_TOOL_CALIBRATE_TOOL_OFFSET,
                                     desc=self.cmd_TOOL_CALIBRATE_TOOL_OFFSET_help)
+        self.gcode.register_command('TOOL_CALIBRATE_SAVE_TOOL_OFFSET', self.cmd_TOOL_CALIBRATE_SAVE_TOOL_OFFSET,
+                                    desc=self.cmd_TOOL_CALIBRATE_SAVE_TOOL_OFFSET_help)
         self.gcode.register_command('TOOL_CALIBRATE_PROBE_OFFSET', self.cmd_TOOL_CALIBRATE_PROBE_OFFSET,
                                     desc=self.cmd_TOOL_CALIBRATE_PROBE_OFFSET_help)
 
@@ -98,10 +100,19 @@ class ToolsCalibrate:
         self.last_result=[location[i]-self.sensor_location[i] for i in range(3)]
         self.gcode.respond_info("Tool offset is %.6f,%.6f,%.6f"
                                 % (self.last_result[0], self.last_result[1], self.last_result[2]))
-        tool_name = gcmd.get("TOOL", default=None)
-        if tool_name:
-            configfile = self.printer.lookup_object('configfile')
-            configfile.set(tool_name, 'offset', "%.6f, %.6f, %.6f" % (self.last_result[0], self.last_result[1], self.last_result[2]))
+
+    cmd_TOOL_CALIBRATE_SAVE_TOOL_OFFSET_help = "Save tool offset calibration to config"
+    def cmd_TOOL_CALIBRATE_SAVE_TOOL_OFFSET(self, gcmd):
+        if not self.last_result:
+            gcmd.error(
+                "No offset result, please run TOOL_CALIBRATE_TOOL_OFFSET first")
+            return
+        section_name = gcmd.get("SECTION")
+        param_name = gcmd.get("ATTRIBUTE")
+        template = gcmd.get("VALUE", "{x:0.6f}, {y:0.6f}, {z:0.6f}")
+        value = template.format(x=self.last_result[0], y=self.last_result[1], z=self.last_result[2])
+        configfile = self.printer.lookup_object('configfile')
+        configfile.set(section_name, param_name, value)
 
     cmd_TOOL_CALIBRATE_PROBE_OFFSET_help = "Calibrate the tool probe offset to nozzle tip"
     def cmd_TOOL_CALIBRATE_PROBE_OFFSET(self, gcmd):
