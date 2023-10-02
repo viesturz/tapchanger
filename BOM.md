@@ -28,10 +28,10 @@
 
 ### Dock
 
- - 2x m3x6, 1x m3x8
+ - some M3 screws
+ - 2x heatset inserts
  - Some high temp silicone for the nozzle pad
- - a small piece of spring to hold up the nozzle pad
-
+ - 35 mm of 7x0.1mm springsteel, salvageable from 1m tape measure.  
 
 ## Mini SB
 
@@ -54,4 +54,4 @@ Listing extra items beyond stock toolhead
  - 2x m3x6, 1x m3x8
  - 2x heatset inserts
  - Some high temp silicone for the nozzle pad
- - a small piece of spring to hold up the nozzle pad
+ - 35 mm of 7x0.1mm springsteel, salvageable from 1m tape measure.
