@@ -45,12 +45,16 @@ See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5n
 
 It's essentially an oversized linear rail, that supports only ~4 mm of travel. The steel rail is replaced by bearing riding on rods.
 
-In addition it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
+In addition, it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
 
 ![Preview](/images/explain1.png)
 ![Preview](/images/explain2.png)
 
 # Revision history:
+
+## V2.3 - Nozzle pads upgraded to springsteel ones, no more melting.
+
+![Pads](/images/pad.jpg)
 
 ## V2.2 - Square rods version added.
 
