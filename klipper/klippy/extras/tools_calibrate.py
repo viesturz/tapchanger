@@ -94,8 +94,7 @@ class ToolsCalibrate:
     cmd_TOOL_CALIBRATE_TOOL_OFFSET_help = "Calibrate current tool offset relative to tool 0"
     def cmd_TOOL_CALIBRATE_TOOL_OFFSET(self, gcmd):
         if not self.sensor_location:
-            gcmd.error("No recorded sensor location, please run TOOL_LOCATE_SENSOR first")
-            return
+            raise gcmd.error("No recorded sensor location, please run TOOL_LOCATE_SENSOR first")
         location = self.locate_sensor(gcmd)
         self.last_result=[location[i]-self.sensor_location[i] for i in range(3)]
         self.gcode.respond_info("Tool offset is %.6f,%.6f,%.6f"
