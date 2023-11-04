@@ -17,15 +17,15 @@ A nozzle Z probe + toolchanger for Voron 2.
 
 I would recommend to install a working single hotend printer first:
 
-* Check the [BOM](./BOM.md).
+* Check the [BOM](/Tapchanger/BOM.md).
 * [Print](./Print%20Guide.md) the parts.
-* [Assemble](./Assembly.md) it.
+* [Assemble](/Tapchanger/Assembly.md) it.
 
 Multiple tools setup:
 
 * You will need a umbilical system supporting multiple hotends, I am [using this](https://github.com/viesturz/Voron2Toolbox)
-* Install [docks](Dock.md).
-* Configure [Klipper](./klipper/README.md).
+* Install [docks](/Dock/Dock.md).
+* Configure [Klipper](./Klipper/README.md).
 * Calibrate the offsets. I'm using [this](https://github.com/viesturz/NozzleAlign).
 
 # Community
@@ -39,7 +39,7 @@ See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5n
 - Basic models from [Voron Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) and [Voron 0](https://github.com/VoronDesign/Voron-0).
 - Mini SB Orbiter cowling form [mozartlovescats](https://www.printables.com/model/366337-voron-02-orbiter-20-trianglelab-chc-mini-stealthbu).
 - Mini SB LGX lite cowling form [MC](https://www.printables.com/model/395933-voron-02-mini-stealthburner-remix-for-lgx-light-ex/files).
-
+- Dragon Burner from [chirpy2605](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner).
 
 # How does this work?
 
