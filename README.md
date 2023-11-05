@@ -5,28 +5,26 @@ A nozzle Z probe + toolchanger for Voron 2.
 ![Preview](/images/rods-photo.jpg)
 
 ## Features
-* Drop in compatibe with [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) hotends.
-* Supports Mini Stealthburner for more compact footprint - can fit 6 hotends in 350 frame.
-* Adaptable from [Tap](https://github.com/VoronDesign/Voron-Tap) with mostly just printed parts.
-* Same [rigidity](https://youtu.be/mGRXtK9F408) and probe accuracy as regular Tap.
+* Drop in compatible with Mini Stealthburner or [Dragon Burner](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner) hotends - can fit 6 hotends in 350 frame. [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) is an option but limited support.
+* Uses [OptoTap](https://www.google.com/search?q=optotap) probe sensor for nozzle Z probing.
+* Same [rigidity](https://youtu.be/mGRXtK9F408) and probe accuracy as Tap.
 * Mostly staying within the same external printer dimensions.
 * No servos, no wires on the shuttle, recommended to use with a Canbus toolhead board for less wires, but anything goes.
-* Uses the Tap sensor to verify successful dropoffs and pickups.
 
 # Build guide
 
-I would recommend to install a working single hotend printer first:
+I would recommend to build a working single hotend printer first:
 
 * Check the [BOM](/Tapchanger/BOM.md).
 * [Print](./Print%20Guide.md) the parts.
 * [Assemble](/Tapchanger/Assembly.md) it.
 
 Multiple tools setup:
-
 * You will need a umbilical system supporting multiple hotends, I am [using this](https://github.com/viesturz/Voron2Toolbox)
-* Install [docks](/Dock/Dock.md).
-* Configure [Klipper](./Klipper/README.md).
-* Calibrate the offsets. I'm using [this](https://github.com/viesturz/NozzleAlign).
+* Install [Docks](/Dock/Dock.md)
+* Add a [TopHat](/TopHat/TopHat.md)
+* Configure [Klipper](./Klipper/README.md)
+* Calibrate the offsets. I'm using [this](https://github.com/viesturz/NozzleAlign)
 
 # Community
 
@@ -51,6 +49,13 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 ![Preview](/images/explain2.png)
 
 # Revision history:
+
+## V2.5
+
+* Added top mounted dock. see updated Dock folder.
+* Slight tweaks square rods mounting plate for easier fit.
+
+![Preview](/images/Dock-Top-Inside.jpg)
 
 ## V2.3 - Nozzle pads upgraded to springsteel ones, no more melting.
 
