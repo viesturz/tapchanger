@@ -17,10 +17,18 @@ Use usual [Voron print settings](https://docs.vorondesign.com/sourcing.html#prin
  - (optional) Enable ironing.
  - support interface layers: 2
  - support interface spacing: 0.12
- - I'm printing with organic suppots, but anythign goes
+ - I'm printing with organic suppots on build plate only, but anything goes
 
 ### Cleanup
 
 You will need to clean up some supports.  Flush cut pliers will get them removed just fine.
 
+![Cleanup](/images/shuttle-cleanup.jpg)
+
 Optionally can print with PETG or soluable supports, but I would not bother.
+
+### Aluminium shuttle
+
+SLS printining the shuttle from aluminium is expensive but adds significant stiffness bonus the the system. 
+
+![Cleanup](/images/shuttle-aluminium.jpg)
