@@ -2,7 +2,8 @@
 
 A nozzle Z probe + toolchanger for Voron 2.
 
-![Preview](/images/rods-photo.jpg)
+![Shuttle](/images/shuttle-pomo.jpg)
+![Printer](/images/printer.jpg) 
 
 ## Features
 * Drop in compatible with Mini Stealthburner or [Dragon Burner](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner) hotends - can fit 6 hotends in 350 frame. [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) is an option but limited support.
@@ -20,7 +21,7 @@ I would recommend to build a working single hotend printer first:
 * [Assemble](/Tapchanger/Assembly.md) it.
 
 Multiple tools setup:
-* You will need a umbilical system supporting multiple hotends, I am [using this](https://github.com/viesturz/Voron2Toolbox)
+* Install [umbilical](/Umbilical/Umbilical.md).
 * Install [Docks](/Dock/Dock.md)
 * Add a [TopHat](/TopHat/TopHat.md)
 * Configure [Klipper](./Klipper/README.md)
@@ -41,14 +42,21 @@ See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5n
 
 # How does this work?
 
-It's essentially an oversized linear rail, that supports only ~4 mm of travel. The steel rail is replaced by bearing riding on rods.
+It's essentially an oversized linear rail, that supports only ~4 mm of travel. The steel rail is replaced by bearings riding on rods.
 
 In addition, it's a kinematic mount, meaning that it's self aligning and there is no play even if the parts are not aligned precisely.
 
+![Preview](/images/rods-photo.jpg)
 ![Preview](/images/explain1.png)
 ![Preview](/images/explain2.png)
 
 # Revision history:
+
+## V2.8
+
+# Added Tophat and Ubmilical, it's now a Printer!
+
+![Printer](/images/printer.jpg) 
 
 ## V2.5
 
