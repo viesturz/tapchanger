@@ -24,7 +24,7 @@ Multiple tools setup:
 * Install [umbilical](/Umbilical/Umbilical.md).
 * Install [Docks](/Dock/Dock.md)
 * Add a [TopHat](/TopHat/TopHat.md)
-* Configure [Klipper](/Klipper/README.md)
+* Configure [Klipper](/klipper/README.md)
 * Calibrate the offsets. I'm using [this](https://github.com/viesturz/NozzleAlign)
 
 # Community
