@@ -5,23 +5,21 @@
 TapChanger is primarily a hardware project. The config here is just the setup I'm using.
 Which should be a reasonable starting point.
 
-Long term I'm looking to upstream the changes in klipper and Klipper_ToolChanger where reasonable.
+I'm working to upstream the changes in klipper where reasonable.
 
 ## Installing
 
 - Install [toolchanger extension](https://github.com/viesturz/klipper-toolchanger/).
-- use the config as a template for your own config
+- use the config example as a guide for your own config.
 
-Optional:
 
-- autodetect active tool copy the toolklippy/tool_probe* files to  ${KLIPPER_PATH}/klippy/
-- nozzle [alignment probe](https://github.com/viesturz/NozzleAlign)
+## Optional - Z homing with any toolhead.
 
-## Z offsets
- 
- The Tap probe does not offer a true Z home. Instead it relies on build surface as Z=0. On the other hand, the tool changing needs reasonably repeatable Z position.
+The included config has a rather elaborate setup that allows Z homing with any toolhaed. This avoids the need to ensure that toolhead 0 is mounted before homing.
 
- So this is a bit more complicated than yor typical setup:
+The tool changing needs reasonably repeatable gantry Z position, since Tap homes to nozzle possition, it will be different for each toolhead.
+
+So this is a bit more complicated than yor typical setup:
 
   - Printer Z=0 - is tool independant, all toolchange moves happen in this space.
   - Tool probe trigger Z offset - distance betwen nozzle touching the bed and probe triggering - is tool specific, but nozzle independant. Specified in tool_probe.z_offset.
