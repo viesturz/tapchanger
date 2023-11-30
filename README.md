@@ -52,6 +52,11 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V2.9
+
+Improved DragonBurner toolhead and dock, adding bottom mounting screws for better stability.
+Needs the modified cowling now.
+
 ## V2.8
 
 # Added Tophat and Ubmilical, it's now a Printer!
