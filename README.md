@@ -56,7 +56,7 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 ## V3.0
 
 Further improvements to DragonBurner toolhead and dock.
-The crew head locking mechanism is back.
+The screw head locking mechanism is back.
 Configuration updated, with better dock pathing.
 
 The Dragon Burner toolhead is now the default. Let me know if you would like to see backports.
