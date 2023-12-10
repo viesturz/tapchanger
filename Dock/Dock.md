@@ -3,7 +3,6 @@
 
 The dock comes in two versions - cross beam mounted or top mounted.
 
-
 | Top mounted  | Cross beam |
 | ------------- | ------------- |
 | * Can be installed in existing frame<br> * Best clearance |  * Supports Full sized Stealthburner <br>* Extra docking latch |
@@ -15,9 +14,46 @@ The dock comes in two versions - cross beam mounted or top mounted.
 
  - High temp silicone for the nozzle pad
  - 35 mm of 7x0.1mm springsteel, salvageable from 1m tape measure.  
- - 2x 5x2mm round magnets
- - **[top mounted only]** 2x 5x10mm steel rod
  - some M3 screws and heatset inserts
+ - *retnetion hardware* - see below
+
+# Toolhead retention
+
+There are 3 versions of retentiom mechanism, this will likely converge as I get more relibility data
+
+## Cross Beam:  Bottom pin + magnet dropped in the toolhead hole.
+
+You will need:
+  - 2x 5x2mm round magnets
+  - 2x m3 x 10 steeel screws in the dock - steel (magnetic)
+  - the screws in toolhead also need to be seel to stick to the magnets
+
+Stealthburner and mini stelathburner on cross beam uses this approach.
+It relies on the bottom pin as the main retention mechanism and the magnet is just to prevent it rattling around.
+
+Drop the magnets on the screw heads in the toolhead. They will stay there on their own, no glue required.
+
+![Cross beam retention](/images/retention-screws.jpg)
+
+## Top: Glued magnet
+
+You will need:
+  - 2x 5x2-3mm round magnets - *make sure you get quality magnets* cheap aliexpress ones are not srong enough
+  - 2x 5x10 steeel steel rod - use the cutting jig to cut to size
+  - the screws in toolhead also need to be seel to stick to the magnets
+
+There are no bottom pins on the top mounted docks, so the magnets are doing most of the holding.
+The magnets are superglued to the steel rods.
+
+![Cross beam retention](/images/retention-magnets.jpg)
+
+## Top: Screw head hook
+
+The toolhead hooks on to the M3 scew heads. Just need 2x m3x10 butthonhead screws.
+
+![Cross beam retention](/images/retention-hookon.jpg)
+
+
 
 # Cross Beam Frame BOM
 

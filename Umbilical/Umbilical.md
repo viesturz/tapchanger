@@ -2,7 +2,7 @@
 
 The wiring system from the main board to all the toolheads.
 
-![Preview](/images/umbilical-top.jpg))
+![Preview](/images/umbilical-top.jpg)
 
 # BOM (per toolhead)
 
