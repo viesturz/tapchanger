@@ -1,1 +1,0 @@
-The step files currently only contains the square rods version.

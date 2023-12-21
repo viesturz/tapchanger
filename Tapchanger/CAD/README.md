@@ -1,1 +1,1 @@
-The step files currently only contains the square rods version.
+The holes are not present in the CAD. Please use the provided hole models to cut either square or round holes.
