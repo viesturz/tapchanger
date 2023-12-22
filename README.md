@@ -53,6 +53,16 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V3.1
+End of year update, lots of small printability, clearance, etc updates. 
+This is a stable version.
+
+* Migrated to Dragon V8 hotend.
+* More clearance around the OptoTap sensor.
+* Tuning of the tension screw angles to minimize the docking resistance.
+* More clearance for big block hotends.
+* Hook-on dock is now the recommended for DragonBurner.
+
 ## V3.0
 
 Further improvements to DragonBurner toolhead and dock.
