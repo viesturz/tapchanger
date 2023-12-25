@@ -53,6 +53,9 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V3.2
+Introduces support for the Experimental Rapid Burner Toolhead by @Marshalldog.
+
 ## V3.1
 End of year update, lots of small printability, clearance, etc updates. 
 This is a stable version.
