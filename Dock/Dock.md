@@ -21,6 +21,15 @@ The dock comes in two versions - cross beam mounted or top mounted.
 
 There are 3 versions of retentiom mechanism, this will likely converge as I get more relibility data
 
+## Screw head hook
+
+Dragon burner uses this method.
+The toolhead hooks on to the M3 scew heads. Just need 2x m3x10 butthonhead screws.
+
+![Cross beam retention](/images/retention-hookon.jpg)
+
+
+
 ## Cross Beam:  Bottom pin + magnet dropped in the toolhead hole.
 
 You will need:
@@ -34,12 +43,6 @@ It relies on the bottom pin as the main retention mechanism and the magnet is ju
 Drop the magnets on the screw heads in the toolhead. They will stay there on their own, no glue required.
 
 ![Cross beam retention](/images/retention-screws.jpg)
-
-## Top: Screw head hook
-
-The toolhead hooks on to the M3 scew heads. Just need 2x m3x10 butthonhead screws.
-
-![Cross beam retention](/images/retention-hookon.jpg)
 
 ## [Deprecated] Top: Glued magnet
 
