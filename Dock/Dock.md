@@ -35,7 +35,13 @@ Drop the magnets on the screw heads in the toolhead. They will stay there on the
 
 ![Cross beam retention](/images/retention-screws.jpg)
 
-## Top: Glued magnet
+## Top: Screw head hook
+
+The toolhead hooks on to the M3 scew heads. Just need 2x m3x10 butthonhead screws.
+
+![Cross beam retention](/images/retention-hookon.jpg)
+
+## [Deprecated] Top: Glued magnet
 
 You will need:
   - 2x 5x2-3mm round magnets - *make sure you get quality magnets* cheap aliexpress ones are not srong enough
@@ -46,13 +52,6 @@ There are no bottom pins on the top mounted docks, so the magnets are doing most
 The magnets are superglued to the steel rods.
 
 ![Cross beam retention](/images/retention-magnets.jpg)
-
-## Top: Screw head hook
-
-The toolhead hooks on to the M3 scew heads. Just need 2x m3x10 butthonhead screws.
-
-![Cross beam retention](/images/retention-hookon.jpg)
-
 
 
 # Cross Beam Frame BOM
