@@ -32,6 +32,6 @@ Optionally can print with PETG or soluable supports, but I would not bother.
 
 ### Aluminium shuttle
 
-SLS printining the shuttle from aluminium is expensive but adds significant stiffness bonus the the system. 
+SLS printining the shuttle from aluminium is expensive but adds significant stiffness bonus.
 
 ![Cleanup](/images/shuttle-aluminium.jpg)
