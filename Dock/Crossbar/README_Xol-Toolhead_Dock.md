@@ -14,6 +14,10 @@ Designed to be compatible with all Xol-Toolhead versions as of 2024-01-19.
 (However only Revo Voron and Rapido 2 UHF has been tested)
 
 #### NB! Tapchanger-Rods Xol-Toolhead dock has it's own docking tool-path. Remember to change to 'rods_xol' in your toolhead config.
+In case you don't already have it from the tapchanger example config toolchanger.cfg , here's the docking tool-path:
+```
+params_rods_xol_path: [{'y':59, 'z':17.5},{'y':5, 'z':17.5},{'y':5, 'z':0.2},{'y':0.5, 'z':0.1},{'z':0, 'y':0, 'f':0.5},{'z':-5, 'y':0},{'z':-6, 'y':3},{'z':-8, 'y':7},{'z':-10, 'y':16}]
+```
 
 #### NB! only compatible with tapchanger rods version as of 2024-01-19
 
