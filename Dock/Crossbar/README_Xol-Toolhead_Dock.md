@@ -30,11 +30,13 @@ gcode_z_offset: 0
 ```
 
 ## BOM:
-| Part                   | Amount    | Description                                                      |
-|------------------------|-----------|------------------------------------------------------------------|
-| 6x3 magnets            | 4         | N35 to N52 (N52 recommended)                                     |
-| springsteel plate      | 1         | max 10mm wide, max 1mm thick, with M4 hole (I used blades from a [feeler gauge](https://www.biltema.no/en-no/car---mc/car-tools/engine-tools/spark-plug-tools/feeler-gauge-mminches-2000028588) ) |
-| M4 screw               | 1         | Maximum 6.3mm wide screw head                                    |
+| Part                        | Amount    | Description                                                      |
+|-----------------------------|-----------|------------------------------------------------------------------|
+| 6x3 magnets                 | 4         | N35 to N52 (N52 recommended)                                     |
+| springsteel plate           | 1         | max 10mm wide, max 1mm thick, with M4 hole (I used blades from a [feeler gauge](https://www.biltema.no/en-no/car---mc/car-tools/engine-tools/spark-plug-tools/feeler-gauge-mminches-2000028588) ) |
+| M4 screw                    | 1         | Maximum 6.3mm wide screw head                                    |
+| M3x14mm BHCS or SHCS screw  | 2         | Any M3 screw will work                                           |
+| M3 Springut for 2020 T-slot | 2         | Any M3 2020 T-Slot Nut will work                                 |
 
 
 ## Assembly
@@ -47,5 +49,6 @@ gcode_z_offset: 0
 - Insert springsteel plate into slot in the Dock
 - Cut and bend springsteel plate to fit your toolhead
 - (optional) apply/mold silicone to the springsteel plate
-- Fix the springsteel plate in place with the m4 screw 
+- Fix the springsteel plate in place with the m4 screw
+- Screw it onto the 2020 aluminium extrusion
 
