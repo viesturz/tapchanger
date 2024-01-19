@@ -37,7 +37,7 @@ You will need:
   - 2x m3 x 10 steeel screws in the dock - steel (magnetic)
   - the screws in toolhead also need to be seel to stick to the magnets
 
-Stealthburner and mini stelathburner on cross beam uses this approach.
+Stealthburner and mini stealthburner on cross beam uses this approach.
 It relies on the bottom pin as the main retention mechanism and the magnet is just to prevent it rattling around.
 
 Drop the magnets on the screw heads in the toolhead. They will stay there on their own, no glue required.
