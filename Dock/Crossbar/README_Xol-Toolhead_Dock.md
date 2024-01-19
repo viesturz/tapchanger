@@ -36,7 +36,7 @@ gcode_z_offset: 0
 | springsteel plate           | 1         | max 10mm wide, max 1mm thick, with M4 hole (I used blades from a [feeler gauge](https://www.biltema.no/en-no/car---mc/car-tools/engine-tools/spark-plug-tools/feeler-gauge-mminches-2000028588) ) |
 | M4 screw                    | 1         | Maximum 6.3mm wide screw head                                    |
 | M3x14mm BHCS or SHCS screw  | 2         | Any M3 screw will work                                           |
-| M3 Springut for 2020 T-slot | 2         | Any M3 2020 T-Slot Nut will work                                 |
+| M3 T-slot nut               | 2         | Any M3 2020 T-Slot Nut will work (recommend springnuts)    |
 
 
 ## Assembly
