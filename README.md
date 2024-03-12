@@ -5,7 +5,7 @@ A nozzle Z probe + toolchanger for Voron 2.
 ## Features
 * Off the shelf voron parts, except for bearings.
 * Uses [Dragon Burner](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner) toolhead - can fit 6 hotends in 350 frame. [Stealthburner](https://github.com/VoronDesign/Voron-Stealthburner) and MiniStealthburner 
-are an option but limited support. (Experimental version of the [Rapid Burner](https://github.com/chirpy2605/voron/tree/main/V0/Rapid_Burner) is in the works by @Marshalldog)
+are an option but limited support. (Experimental version of the [Rapid Burner](https://github.com/chirpy2605/voron/tree/main/V0/Rapid_Burner) is in the works by @Marshalldog) (Experimental version for the [Xol-Toolhead](https://github.com/Armchair-Engineering/Xol-Toolhead) is in the works)
 * Uses [OptoTap](https://www.google.com/search?q=optotap) probe sensor for nozzle Z probing.
 * Same [rigidity](https://youtu.be/mGRXtK9F408) and probe accuracy as Tap.
 * Same external printer dimensions, except for top hat.
