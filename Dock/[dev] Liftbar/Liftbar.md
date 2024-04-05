@@ -8,6 +8,9 @@ Work in progress, everything is subject to change.
 
 ## BOM
 
+XY Idlers:
+ - 2x 20mm 5mm shaft
+
 Common:
 - omron d2f endstop switch
 - ~4m 6mm GT2 belt
