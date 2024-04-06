@@ -2,9 +2,7 @@
 
 A motorized crossbar - compatible with Trident and V2.
 
-Work in progress, everything is subject to change.
-
-![Overview](/images/liftbar.jpg)
+For up to 3 toolheads (2 docked), a single motor is sufficient. For more, I recommend two motors.
 
 ## BOM
 
@@ -33,11 +31,23 @@ For dual motor:
 
 ## Assembly
 
-TODO:
+Work in progress...
+
+* Assemble and replace the the XY idlers
+* Install the Top idlers
+* Install the linear rails, make sure they do not interere with XY idlers
+* Install endstop
+* Assemble and connect the gearboxes
+* Assemble the gantry
+* Install the belt
+* Align the gantry to be horizontal
+* Tension the belt
+* Test the lifbar movement
 
 ## Configuration
 See toolchanger-lifbar.cfg in Klipper folder.
 
 ## Pics
 
+![Overview](/images/liftbar.jpg)
 ![Gearbox](/images/liftbar-gearbox.jpg)
