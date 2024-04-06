@@ -5,7 +5,7 @@ The dock comes in 3 versions - cross beam mounted, top mounted or on rails.
 
 | Top mounted  | Cross beam | Liftbar | 
 | ------------- | ------------- |  ------------- |
-| * Can be installed in existing frame<br> * Good clearance |  * Supports Full sized Stealthburner <br>* Extra docking latch | * Complex to build <br>* Slightly faster changes<br>* Can install on Trident |
+| * Can be installed in existing frame<br> * Good clearance |  * Supports Full sized Stealthburner <br>* Extra docking latch | * Complex to build <br> * Best clearance <br>* Slightly faster changes<br>* Can install on Trident |
 | ![Preview](/images/Dock-Top.jpg) | ![Preview](/images/CrossBeam.jpg)  |  ![Preview](/images/liftbar.jpg)  | 
 | ![Preview](/images/Dock-Top-Inside.jpg) | ![Preview](/images/Crossbeam-Toolheads.jpg) | ![Preview](/images/liftbar-Toolheads.jpg) |
 
@@ -22,7 +22,6 @@ See [Liftbar instructions](./Liftbar/Liftbar.md)
  - *retnetion hardware* - see below
 
 
-
 # Toolhead retention
 
 There are 2 versions of retentiom mechanism, this will likely converge as I get more relibility data
@@ -34,15 +33,15 @@ The toolhead hooks on to the M3 scew heads. Just need 2x m3x10 butthonhead screw
 
 ![Cross beam retention](/images/retention-hookon.jpg)
 
-## Bottom pin + magnet dropped in the toolhead hole.
+## Bottom pin + magnet to toolhead screws.
+
+Stealthburner and mini stelathburner on cross beam uses this approach.
+It relies on a bottom pin as the main retention mechanism and the magnet is just to prevent it rattling around.
 
 You will need:
   - 2x 5x2mm round magnets
   - 2x m3 x 10 steeel screws in the dock - steel (magnetic)
   - the screws in toolhead also need to be seel to stick to the magnets
-
-Stealthburner and mini stelathburner on cross beam uses this approach.
-It relies on the bottom pin as the main retention mechanism and the magnet is just to prevent it rattling around.
 
 Drop the magnets on the screw heads in the toolhead. They will stay there on their own, no glue required.
 
