@@ -53,6 +53,16 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V4.0
+[Liftbar dock](/Dock/Liftbar/Liftbar.md)
+
+![Liftbar](/images/liftbar.jpg)
+
+Other minor DragonBurner changes:
+* More clearance around the hookon slot.
+* More room around the cooling fans, to avoid cracking the cowling when tightening the bottom screws.
+* More sturdy dock.
+
 ## V3.2
 Introduces support for the Experimental Rapid Burner Toolhead by @Marshalldog.
 
