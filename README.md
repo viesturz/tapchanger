@@ -53,6 +53,18 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V4.1
+HGX gears + Dragon + EBB36 [optimized toolhead](/Tapchanger/STL/Toolheads/DragonBurner/HGX%20Gears/):
+
+* 17 mm shorter filament path
+* 17 grams lighter than stock, only 2 screws
+* Integrated harness strain relief
+* Integrated EBB36 mount & shield
+* Bambu & Revo adapters only for now
+* There will be some supports to remove.
+
+![HGX gears toolhead](/images/hgx_toolhead.jpg)
+
 ## V4.0
 [Liftbar dock](/Dock/Liftbar/Liftbar.md)
 
