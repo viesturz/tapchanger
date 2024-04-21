@@ -7,6 +7,10 @@ For up to 3 toolheads (2 docked), a single motor is sufficient. For more, I reco
 ![Details image](/images/liftbar%20-%20details.jpg)
 
 ## BOM
+2020 Extrusion:
+ -  279mm long for 250mm build
+ -  329mm long for 300mm build
+ -  379mm long for 350mm build
 
 XY Idlers:
  - 2x 20mm 5mm shaft
