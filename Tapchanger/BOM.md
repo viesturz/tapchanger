@@ -24,5 +24,5 @@
 Depending on which version you are building you will also need:
 
  - *Pads version*: 4x steel pads - 10x4mmx1.5mm, im cutting them from a stock piece from local hw store
- - *Rods version*: 2x 3mm steel rod, 26mm long 
- - *Square Rods version*: 2x 3x3mm square steel rod, 26mm long, [aliexpress](https://aliexpress.com/w/wholesale-square-steel-rod-3mm.html) has them.
+ - *Rods version*: 2x 3mm steel rod, 30mm long 
+ - *Square Rods version*: 2x 3x3mm square steel rod, 30mm long, [aliexpress](https://aliexpress.com/w/wholesale-square-steel-rod-3mm.html) has them.
