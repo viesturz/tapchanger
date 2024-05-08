@@ -41,6 +41,7 @@ See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5n
 - Mini SB Orbiter cowling form [mozartlovescats](https://www.printables.com/model/366337-voron-02-orbiter-20-trianglelab-chc-mini-stealthbu).
 - Mini SB LGX lite cowling form [MC](https://www.printables.com/model/395933-voron-02-mini-stealthburner-remix-for-lgx-light-ex/files).
 - Dragon Burner from [chirpy2605](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner).
+- HGX gears extruder derived from [nhchiu's ProtoXtruder](https://github.com/nhchiu/VoronMods/tree/main/Extruders/ProtoXtruder)
 
 # How does this work?
 
