@@ -41,6 +41,7 @@ See Tapchanger [youtube channel](https://www.youtube.com/playlist?list=PLqU7kX5n
 - Mini SB Orbiter cowling form [mozartlovescats](https://www.printables.com/model/366337-voron-02-orbiter-20-trianglelab-chc-mini-stealthbu).
 - Mini SB LGX lite cowling form [MC](https://www.printables.com/model/395933-voron-02-mini-stealthburner-remix-for-lgx-light-ex/files).
 - Dragon Burner from [chirpy2605](https://github.com/chirpy2605/voron/tree/main/V0/Dragon_Burner).
+- HGX gears extruder derived from [nhchiu's ProtoXtruder](https://github.com/nhchiu/VoronMods/tree/main/Extruders/ProtoXtruder)
 
 # How does this work?
 
@@ -52,6 +53,28 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 ![Shuttle](/images/Animation.gif)
 
 # Revision history:
+
+## V4.1
+HGX gears + Dragon + EBB36 [optimized toolhead](/Tapchanger/STL/Toolheads/DragonBurner/HGX%20Gears/):
+
+* 17 mm shorter filament path
+* 17 grams lighter than stock, only 2 screws
+* Integrated harness strain relief
+* Integrated EBB36 mount & shield
+* Bambu & Revo adapters only for now
+* There will be some supports to remove.
+
+![HGX gears toolhead](/images/hgx_toolhead.jpg)
+
+## V4.0
+[Liftbar dock](/Dock/Liftbar/Liftbar.md)
+
+![Liftbar](/images/liftbar.jpg)
+
+Other minor DragonBurner changes:
+* More clearance around the hookon slot.
+* More room around the cooling fans, to avoid cracking the cowling when tightening the bottom screws.
+* More sturdy dock.
 
 ## V3.2
 Introduces support for the Experimental Rapid Burner Toolhead by @Marshalldog.
