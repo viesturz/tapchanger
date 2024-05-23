@@ -54,6 +54,21 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V4.2
+Small tweaks across the board:
+* Dragon toolhead mount plate 1mm thicker - no interferance with fans and 8mm tensioning screws do not stick out
+* Fix shuttle mounting plate misalignment, thanks [vikwin](https://github.com/vikwin) for spotting
+* Alternative version for the PFTE tube holder at the side
+* Dock for RapidBurner
+* Extras
+  * Better ventilated EBB36 shield 
+  * Improved strain relief for HGX + DragonBurner
+  * More Stepper gear distance adjustability for HGX + DragonBurner.
+
+Dragon burner toolhead exploded view: 
+
+![Exploded](/images/toolhead_exploded.png)
+
 ## V4.1
 HGX gears + Dragon + EBB36 [optimized toolhead](/Tapchanger/STL/Toolheads/DragonBurner/HGX%20Gears/):
 
