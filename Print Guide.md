@@ -4,11 +4,11 @@ The plastic parts are bearing quite some load, so printing them accurately key t
 
 ### Plastic
 
-ASA is the preferred filament right now, providing generally better rigidity than ABS, especially when kept under load. I have had good success with Prusament ASA.
+Polycarbonate is the recommended option, being extremely rigid. And requires no glue to hold the inserts in.
+
+ASA is the next best option, providing generally better rigidity than ABS, especially when kept under load. I have had good success with Prusament ASA.
 
 CF-ASA is also fine. I did not see significnant delta from plain ASA however.
-
-PC-ABS is an option, drop me a line if you have success with that.
 
 ### Parameters
 
@@ -32,6 +32,6 @@ Optionally can print with PETG or soluable supports, but I would not bother.
 
 ### Aluminium shuttle
 
-SLS printining the shuttle from aluminium is expensive but adds significant stiffness bonus.
+SLS printining the shuttle from aluminium is expensive but adds significant stiffness bonus over ASA. Similar to polycarbonate.
 
 ![Cleanup](/images/shuttle-aluminium.jpg)

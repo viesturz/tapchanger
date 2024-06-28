@@ -54,6 +54,13 @@ In addition, it's a kinematic mount, meaning that it's self aligning and there i
 
 # Revision history:
 
+## V4.3
+Dragon burner printability, ease of assembly tweaks:
+* Two piece mount plate with less supports needed
+* Better access to the heatset inserts
+* Slightly larger sensor screw holes to better work with polycarbonate
+* Will need to reprint the cowling as well, slight changes there
+
 ## V4.2
 Small tweaks across the board:
 * Dragon toolhead mount plate 1mm thicker - no interferance with fans and 8mm tensioning screws do not stick out
