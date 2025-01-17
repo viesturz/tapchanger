@@ -10,7 +10,7 @@ I'm working to upstream the changes in klipper where reasonable.
 ## Installing
 
 - Install [toolchanger extension](https://github.com/viesturz/klipper-toolchanger/).
-- use the config example as a guide for your own config.
+- Use the [config examples](https://github.com/viesturz/klipper-toolchanger/examples) to setup your Klipper config.
 
 ## Prusa slicer config
 
@@ -45,4 +45,3 @@ Klipper unfortinately assumes that the Z=0 is a fixed distance from the endstop 
 When **printing**, the Gcode offset is = tool Z offset.
 
 When **changing tools**, Gcode offset = 0.
-
