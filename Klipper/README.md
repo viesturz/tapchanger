@@ -10,7 +10,7 @@ I'm working to upstream the changes in klipper where reasonable.
 ## Installing
 
 - Install [toolchanger extension](https://github.com/viesturz/klipper-toolchanger/).
-- Use the [config examples](https://github.com/viesturz/klipper-toolchanger/examples) to setup your Klipper config.
+- Use the [config examples](https://github.com/viesturz/klipper-toolchanger/tree/main/examples) to setup your Klipper config.
 
 ## Prusa slicer config
 
