@@ -61,6 +61,19 @@ For dual motor:
 
 
 Work in progress...
+### XY Idlers - Trident
+1. Ensure you print 2 of each of the parts, do not mirror or reorient. You will need supports.
+2. Install 2 short heat set inserts (no longer than 4mm) into each housing. The inserts must be set below the 
+   lip so there is room for a socket head.
+   ![housing 0](/images/housing-insert.png) 
+3. Install 2 M3x8mm SHSC into each housing, all the way into the heat set inserts. The heads should be sunk slightly.
+4. Ream out the center hole to 5mm with a dedicated reaming tool or a drill bit. 
+5. Insert the pulley and 2 M5 washers into each slide, using the 20mm pin as an axle.
+  * The pin needs to be centered in the slide so you can get a hex key into the small 3mm holes perpendicular to the axis. 
+6. Insert the slide into the housing.
+7. Check to make sure the slide goes all the way into the housing.
+  * If it only goes in half way, flip orientation of the slide and try again.
+8. To tension, use a 2.5mm hex key in either small hole   
 
 ### Gearbox
 
